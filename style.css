@@ -1759,6 +1759,37 @@ a.member-card {
   color: var(--color-black);
 }
 
+/* 受賞時の写真。縦横比がまちまちなので固定枠に contain で収める */
+.pub-award-item > span:nth-child(2) {
+  flex: 1;
+  min-width: 0;
+}
+
+.pub-award-photo {
+  flex-shrink: 0;
+  width: 110px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.pub-award-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .pub-award-item {
+    flex-wrap: wrap;
+  }
+  .pub-award-photo {
+    width: 90px;
+    margin-left: 3.5rem;
+  }
+}
+
 .funding-category {
   margin-bottom: 2rem;
 }
