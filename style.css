@@ -17,8 +17,8 @@
   --color-gray:       #888888;
   --color-gray-light: #f5f5f2;
   --color-white:      #ffffff;
-  --color-accent:     #2e7d32;   /* ★ アクセントカラー：ここを変えると全体の色が変わる */
-  --color-accent-bg:  #e8f5e9;
+  --color-accent:     #00008B;   /* ★ アクセントカラー：ここを変えると全体の色が変わる */
+  --color-accent-bg:  #e6e6f5;
 
   /* タグカラー */
   --color-tag-paper:  #e3f2fd;
@@ -30,7 +30,7 @@
 
   /* タイポグラフィ */
   --font-ja: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
-  --font-en: "Inter", "Helvetica Neue", sans-serif;
+  --font-en: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
 
   /* レイアウト */
   --max-width: 1080px;
@@ -88,6 +88,7 @@ img {
   justify-content: space-between;
   height: var(--header-height);
   gap: 2rem;
+  max-width: 1200px;
 }
 
 .logo {
@@ -98,14 +99,14 @@ img {
 }
 
 .logo-ja {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 500;
   color: var(--color-white);
   white-space: nowrap;
 }
 
 .logo-en {
-  font-size: 10px;
+  font-size: 11px;
   color: rgba(255, 255, 255, 0.4);
   white-space: nowrap;
 }
@@ -118,7 +119,7 @@ img {
 .nav-list a {
   display: block;
   padding: 0.5rem 0.85rem;
-  font-size: 12px;
+  font-size: 13px;
   color: rgba(255, 255, 255, 0.65);
   transition: color 0.2s;
   white-space: nowrap;
@@ -158,21 +159,26 @@ img {
 
 .hero-inner {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  grid-template-columns: 1fr 1.2fr;
+  gap: clamp(2rem, 4vw, 4rem);
   align-items: center;
+  /* ヒーローだけ全画面幅に（.container の制限を解除） */
+  max-width: none;
+  width: 100%;
+  padding: 0 0 0 clamp(1.5rem, 6vw, 6rem);
 }
 
 .hero-label {
   font-size: 11px;
-  color: var(--color-accent);
+  /* ヒーローのラベルだけテーマカラーを使わず固定色にする（他はテーマカラー維持） */
+  color: rgba(255, 255, 255, 0.65);
   letter-spacing: 0.1em;
   font-weight: 500;
   margin-bottom: 1.5rem;
 }
 
 .hero-title {
-  font-size: clamp(28px, 4vw, 44px);
+  font-size: clamp(32px, 4.5vw, 52px);
   font-weight: 500;
   color: var(--color-white);
   line-height: 1.3;
@@ -181,7 +187,7 @@ img {
 }
 
 .hero-desc {
-  font-size: 14px;
+  font-size: 16px;
   color: rgba(255, 255, 255, 0.5);
   line-height: 1.9;
 }
@@ -189,7 +195,7 @@ img {
 .hero-image {
   border-radius: 8px;
   overflow: hidden;
-  width: 85%;
+  width: 100%;
   margin-left: auto;
 }
 
@@ -197,6 +203,104 @@ img {
   width: 100%;
   height: auto;
   object-fit: contain;
+}
+
+/* ===== ヒーロー カルーセル ===== */
+.hero-carousel {
+  position: relative;
+}
+
+.hero-carousel-track {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  pointer-events: none;
+}
+
+.hero-slide.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.hero-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 前後ボタン */
+.hero-carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease, background 0.3s ease;
+  z-index: 2;
+}
+
+.hero-carousel:hover .hero-carousel-btn,
+.hero-carousel:focus-within .hero-carousel-btn {
+  opacity: 1;
+}
+
+.hero-carousel-btn:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.hero-carousel-prev {
+  left: 12px;
+}
+
+.hero-carousel-next {
+  right: 12px;
+}
+
+/* ドット */
+.hero-carousel-dots {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 2;
+}
+
+.hero-carousel-dot {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.45);
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.hero-carousel-dot.is-active {
+  background: #fff;
+  transform: scale(1.25);
 }
 
 /* 写真が未設定の場合のプレースホルダー */
@@ -220,6 +324,11 @@ img {
 .section {
   padding: 5rem 0;
   border-bottom: 1px solid #ebebeb;
+}
+
+/* 固定ヘッダー分だけアンカー位置をずらす（#theme1 等へのスクロール時） */
+.section[id] {
+  scroll-margin-top: 80px;
 }
 
 .section-alt {
@@ -512,18 +621,48 @@ img {
 
 .footer-sns {
   display: flex;
-  gap: 1rem;
+  gap: 0.8rem;
   flex-shrink: 0;
 }
 
+/* アイコンだけだと何のリンクか伝わりにくいので、ラベル文字を併記したピル型ボタン */
 .footer-sns a {
-  font-size: 11px;
-  color: rgba(255, 255, 255, 0.35);
-  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  height: 40px;
+  padding: 0 1.1rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
 }
 
 .footer-sns a:hover {
-  color: rgba(255, 255, 255, 0.7);
+  background: #fff;
+  color: #0a0a0a;
+}
+
+.footer-sns svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .footer-sns {
+    gap: 0.6rem;
+  }
+  .footer-sns a {
+    height: 36px;
+    padding: 0 0.9rem;
+    font-size: 13px;
+  }
 }
 
 /* ---------- PROFILE PAGE（教員個別ページ） ---------- */
@@ -601,6 +740,14 @@ img {
   color: rgba(255, 255, 255, 0.75);
 }
 
+/* 明るい背景（.section）内の戻るリンクは濃色にして視認性を確保 */
+.section .back-link {
+  color: var(--color-gray);
+}
+.section .back-link:hover {
+  color: var(--color-dark);
+}
+
 /* プロフィールセクション共通 */
 .profile-section {
   padding: 3rem 0;
@@ -612,12 +759,14 @@ img {
 }
 
 .profile-section-title {
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.12em;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
   color: var(--color-accent);
   text-transform: uppercase;
   margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--color-accent);
 }
 
 /* タイムライン（学歴・職歴） */
@@ -902,7 +1051,7 @@ img {
 
 .book-card {
   display: grid;
-  grid-template-columns: 120px 1fr;
+  grid-template-columns: 160px 1fr;
   gap: 2rem;
   border: 1px solid #e8e8e8;
   border-radius: 8px;
@@ -1417,27 +1566,21 @@ a.member-card {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  counter-reset: pub-counter;
 }
 
 .pub-item {
   background: #fafaf8;
   border: 1px solid #e8e8e8;
   border-radius: 6px;
-  padding: 0.9rem 1rem 0.85rem 2.75rem;
+  padding: 0.9rem 1rem 0.85rem 1rem;
   position: relative;
-  counter-increment: pub-counter;
 }
 
-.pub-item::before {
-  content: counter(pub-counter);
-  position: absolute;
-  left: 0.8rem;
-  top: 0.95rem;
-  font-size: 10px;
-  font-weight: 700;
-  color: var(--color-gray);
-  line-height: 1;
+.pub-author {
+  font-size: 12px;
+  color: var(--color-dark);
+  line-height: 1.6;
+  margin: 0 0 0.25rem;
 }
 
 .pub-title {
@@ -1445,7 +1588,54 @@ a.member-card {
   font-weight: 600;
   color: var(--color-dark);
   line-height: 1.65;
-  margin: 0 0 0.45rem;
+  margin: 0 0 0.25rem;
+}
+
+/* DOIリンクがある論文タイトル：アクセント色で「押せる」ことを示す
+   （リンクが無い論文は .pub-title の --color-dark のまま） */
+.pub-title a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.pub-title a:hover,
+.pub-title a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.pub-journal {
+  font-size: 12px;
+  color: var(--color-dark);
+  line-height: 1.65;
+  margin: 0;
+}
+
+.pub-journal a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.pub-journal a:hover {
+  text-decoration: underline;
+}
+
+.pub-presentation {
+  font-size: 13px;
+  line-height: 1.75;
+  color: var(--color-dark);
+  margin: 0;
+  word-break: break-word;
+}
+
+.pub-presentation a {
+  color: var(--color-accent);
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.pub-presentation a:hover {
+  text-decoration: underline;
 }
 
 .pub-details {
@@ -1572,6 +1762,64 @@ a.member-card {
   margin-bottom: 0.75rem;
 }
 
+/* 外部資金テーブル */
+.funding-table-wrap {
+  overflow-x: auto;
+  margin-bottom: 1.75rem;
+}
+
+.funding-table {
+  width: 100%;
+  min-width: 700px;
+  table-layout: fixed;
+  border-collapse: collapse;
+  font-size: 12.5px;
+  line-height: 1.6;
+}
+
+.funding-table th,
+.funding-table td {
+  border: 1px solid #e8e8e8;
+  padding: 0.5rem 0.7rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.funding-table thead th {
+  background: var(--color-gray-light);
+  font-weight: 700;
+  color: var(--color-dark);
+  white-space: nowrap;
+}
+
+.funding-table td:nth-child(1),
+.funding-table td:nth-child(4) {
+  white-space: nowrap;
+}
+
+.funding-table td:nth-child(1) {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+/* 列幅を両テーブルで固定し、研究課題名(2列目)に残り幅を割り当てて揃える */
+.funding-table th:nth-child(1),
+.funding-table td:nth-child(1) { width: 13em; }    /* 名称 */
+.funding-table th:nth-child(3),
+.funding-table td:nth-child(3) { width: 12em; }    /* 年度 */
+.funding-table th:nth-child(4),
+.funding-table td:nth-child(4) { width: 8.5em; }   /* 研究代表者 */
+/* 2列目(研究課題名)は幅指定なし＝残り全幅。table-layout:fixed で両表とも同じ幅になる */
+
+/* その他の助成金：名称が長いので折り返す（行数が増えてもよい） */
+.funding-table--org td:nth-child(1) {
+  white-space: normal;
+}
+
+.funding-table tbody tr:nth-child(even) {
+  background: #fafaf8;
+}
+
 .funding-items {
   display: flex;
   flex-direction: column;
@@ -1614,7 +1862,8 @@ a.member-card {
   display: flex;
   align-items: flex-start;
   gap: 0;
-  max-width: 1200px;
+  /* サイドバー200px + 本文996px。写真300px×3枚（gap込み938.4px）が収まる幅 */
+  max-width: 1260px;
   margin: 0 auto;
 }
 
@@ -1715,6 +1964,148 @@ a.member-card {
   background: rgba(0,80,160,0.06);
 }
 
+/* ===== 研究業績 一覧ページ（カード） ===== */
+.achv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.achv-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1.6rem 1.4rem;
+  background: #fafaf8;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.achv-card:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
+
+.achv-card-en {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-dark);
+  letter-spacing: 0.01em;
+}
+
+.achv-card-ja {
+  font-size: 12px;
+  color: var(--color-gray);
+}
+
+/* 準備中プレースホルダー */
+.pub-placeholder {
+  font-size: 14px;
+  color: var(--color-gray);
+  padding: 1rem 0;
+}
+
+/* リンクページ */
+.link-category {
+  margin-bottom: 2rem;
+}
+
+.link-category-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-black);
+  letter-spacing: 0.05em;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--color-accent);
+  margin-bottom: 1.1rem;
+}
+
+.link-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.link-list a {
+  display: inline-block;
+  font-size: 18px;
+  color: var(--color-dark);
+  text-decoration: none;
+  line-height: 1.7;
+  transition: color 0.15s;
+}
+
+.link-list a::before {
+  content: "›";
+  color: var(--color-accent);
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+.link-list a:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+/* ロゴ付きリンク（学会など）。ロゴが矢印の役目を兼ねるので › は出さない */
+.link-list--logo a {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.link-list--logo a::before {
+  content: none;
+}
+
+/* ロゴは正方形・横長・縦長と形がまちまちなので、固定枠に contain で収めて揃える */
+.link-logo {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px;
+  background: #fff;
+  border: 1px solid #ececec;
+  border-radius: 4px;
+}
+
+.link-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* その他ページ 図版 */
+.others-figure {
+  margin: 0 0 2rem;
+  max-width: 560px;
+}
+
+.others-caption {
+  font-size: 13px;
+  color: var(--color-dark);
+  line-height: 1.6;
+  margin-bottom: 0.6rem;
+}
+
+.others-figure img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+}
+
 /* ================================
    レスポンシブ対応（スマホ）
    ================================ */
@@ -1742,6 +2133,10 @@ a.member-card {
     padding: 0.3rem 0.7rem;
     background: var(--color-light);
     border-radius: 4px;
+  }
+  /* フォトギャラリー：隠れた details の代わりに大項目リンクを出す */
+  .photo-nav-compact {
+    display: block;
   }
 }
 
@@ -1785,6 +2180,8 @@ a.member-card {
   .hero-inner {
     grid-template-columns: 1fr;
     gap: 2rem;
+    /* モバイルは全画面幅をやめ、左右対称の余白に戻す */
+    padding: 0 1.5rem;
   }
 
   .hero-image {
@@ -1827,7 +2224,7 @@ a.member-card {
 
   /* 書籍紹介 */
   .book-card {
-    grid-template-columns: 90px 1fr;
+    grid-template-columns: 110px 1fr;
     gap: 1.25rem;
   }
 
@@ -2030,7 +2427,41 @@ a.member-card {
   color: var(--color-dark);
   white-space: pre-line;
 }
-.book-detail-text { display: none; }
+/* 書籍カード：出版社サイトへのリンクボタン */
+.btn-publisher {
+  display: inline-block;
+  margin-top: 0.9rem;
+  padding: 8px 18px;
+  border: 1px solid var(--color-accent);
+  border-radius: 4px;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  color: var(--color-accent);
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-publisher:hover,
+.btn-publisher:focus-visible {
+  background: var(--color-accent);
+  color: var(--color-white);
+}
+
+.book-detail-text {
+  display: block;
+  margin-top: 0.9rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid #ececea;
+  font-size: 13px;
+  line-height: 1.9;
+  color: var(--color-dark);
+  white-space: pre-line;
+}
+
+.book-detail-credit {
+  display: block;
+  margin-top: 1.6em;
+  text-align: right;
+}
 
 @media (max-width: 480px) {
   .book-modal-box {
@@ -2052,7 +2483,7 @@ a.member-card {
 }
 .pr-item {
   display: grid;
-  grid-template-columns: 6.5rem 1fr auto;
+  grid-template-columns: 6.5rem 1fr;
   align-items: center;
   gap: 0 1.25rem;
   padding: 1rem 0;
@@ -2072,21 +2503,15 @@ a.member-card {
   color: var(--color-dark);
   line-height: 1.7;
   margin: 0;
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.15s;
 }
-.pr-btn {
-  display: inline-block;
-  white-space: nowrap;
-  font-size: 12px;
-  font-weight: 600;
+.pr-title:hover,
+.pr-title:focus-visible {
   color: var(--color-accent);
-  border: 1px solid var(--color-accent);
-  border-radius: 3px;
-  padding: 0.25rem 0.75rem;
-  transition: background 0.15s, color 0.15s;
-}
-.pr-btn:hover {
-  background: var(--color-accent);
-  color: #fff;
+  text-decoration: underline;
 }
 
 @media (max-width: 680px) {
@@ -2094,9 +2519,6 @@ a.member-card {
     grid-template-columns: 1fr;
     gap: 0.4rem 0;
     padding: 1rem 0;
-  }
-  .pr-btn {
-    align-self: flex-start;
   }
 }
 
@@ -2271,8 +2693,18 @@ a.member-card {
 }
 
 /* ---------- PHOTO GALLERY SIMPLE ---------- */
+/* サイドナビは pub-sidebar 部品を流用。900px以下では details が隠れるため、
+   大項目だけのリンクに切り替える（下部のメディアクエリで表示） */
+.photo-nav-compact {
+  display: none;
+}
 .photo-section {
   margin-bottom: 3.5rem;
+  scroll-margin-top: 80px;
+}
+/* 固定ヘッダー分だけ各イベントの着地位置をずらす */
+.photo-subsection[id] {
+  scroll-margin-top: 80px;
 }
 .photo-section-heading {
   font-size: 20px;
@@ -2296,6 +2728,7 @@ a.member-card {
 .photo-row {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
   gap: 1.2rem;
   margin-bottom: 0.5rem;
 }
@@ -2303,20 +2736,25 @@ a.member-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 220px;
+  width: 300px;
 }
 .photo-item img {
-  width: 220px;
-  height: 165px;
-  object-fit: cover;
+  width: 100%;
+  height: auto;
   border-radius: 4px;
 }
 .photo-item-caption {
+  width: 100%;
   font-size: 12px;
   color: #555;
   text-align: center;
   margin-top: 0.4rem;
-  line-height: 1.4;
+  line-height: 1.5;
+}
+/* 長い説明文は中央揃えだと読みにくいので左に寄せる */
+.photo-item-caption--long {
+  text-align: left;
+  line-height: 1.6;
 }
 .photo-placeholder {
   background: #f5f5f5;
@@ -2326,6 +2764,12 @@ a.member-card {
   color: #999;
   font-size: 14px;
   text-align: center;
+}
+.photo-lead {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 1rem;
 }
 @media (max-width: 600px) {
   .photo-item,

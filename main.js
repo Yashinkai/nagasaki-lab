@@ -12,6 +12,57 @@ if (hamburger && nav) {
   });
 }
 
+/* ヒーロー カルーセル（オートプレイ + 前後ボタン + ドット） */
+(function () {
+  const carousel = document.querySelector('.hero-carousel');
+  if (!carousel) return;
+
+  const slides = Array.from(carousel.querySelectorAll('.hero-slide'));
+  if (slides.length <= 1) return;
+
+  const prevBtn = carousel.querySelector('.hero-carousel-prev');
+  const nextBtn = carousel.querySelector('.hero-carousel-next');
+  const dotsWrap = carousel.querySelector('.hero-carousel-dots');
+
+  let current = 0;
+  let timer = null;
+  const INTERVAL = 5000;
+
+  /* ドットを生成 */
+  const dots = slides.map((_, i) => {
+    const dot = document.createElement('button');
+    dot.type = 'button';
+    dot.className = 'hero-carousel-dot' + (i === 0 ? ' is-active' : '');
+    dot.setAttribute('role', 'tab');
+    dot.setAttribute('aria-label', (i + 1) + '枚目のスライド');
+    dot.addEventListener('click', () => { goTo(i); restart(); });
+    if (dotsWrap) dotsWrap.appendChild(dot);
+    return dot;
+  });
+
+  function goTo(index) {
+    current = (index + slides.length) % slides.length;
+    slides.forEach((s, i) => s.classList.toggle('is-active', i === current));
+    dots.forEach((d, i) => d.classList.toggle('is-active', i === current));
+  }
+
+  function next() { goTo(current + 1); }
+  function prev() { goTo(current - 1); }
+
+  function start() { timer = setInterval(next, INTERVAL); }
+  function stop()  { if (timer) { clearInterval(timer); timer = null; } }
+  function restart() { stop(); start(); }
+
+  if (nextBtn) nextBtn.addEventListener('click', () => { next(); restart(); });
+  if (prevBtn) prevBtn.addEventListener('click', () => { prev(); restart(); });
+
+  /* ホバー中は自動再生を停止 */
+  carousel.addEventListener('mouseenter', stop);
+  carousel.addEventListener('mouseleave', start);
+
+  start();
+}());
+
 /* 研究業績ページ — サイドバー年リンク + スクロールスパイ */
 (function () {
   const sidebar = document.querySelector('.pub-sidebar');

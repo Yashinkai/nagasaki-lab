@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>フォトギャラリー — 長崎大学 運動障害リハビリテーション学研究室</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,8 +14,8 @@
   <header class="header">
     <div class="container header-inner">
       <a href="index.html" class="logo">
-        <span class="logo-ja">運動障害リハビリテーション学研究室</span>
-        <span class="logo-en">Laboratory of Locomotive Rehabilitation Science — Nagasaki University</span>
+        <span class="logo-ja">長崎大学大学院医歯薬学総合研究科 運動障害リハビリテーション学研究室</span>
+        <span class="logo-en">Nagasaki University Graduate School of Biomedical Sciences Laboratory of Locomotive Rehabilitation Science</span>
       </a>
       <nav class="nav">
         <ul class="nav-list">
@@ -23,7 +26,7 @@
           <li><a href="pressrelease.html">プレスリリース</a></li>
           <li><a href="photo.html" class="nav-active">フォトギャラリー</a></li>
           <li><a href="book.html">書籍紹介</a></li>
-          <li><a href="access.html">アクセス</a></li>
+          <li><a href="link.html">リンク</a></li>
         </ul>
       </nav>
       <button class="hamburger" id="hamburger" aria-label="メニューを開く">
@@ -39,270 +42,583 @@
     </div>
   </section>
 
+  <div class="pub-layout-outer">
+
+    <aside class="pub-sidebar">
+      <!-- 業績ページ（papers.html）と共通のサイドナビ部品を流用 -->
+      <nav class="pub-sidenav" aria-label="ページ内目次">
+        <a href="#research" class="pub-sidenav-link">研究活動の様子</a>
+        <details class="pub-sidenav-group">
+          <summary class="pub-sidenav-heading">研修会の模様</summary>
+          <ul class="pub-sidenav-years">
+            <li><a href="#workshop">研修会の模様の先頭へ</a></li>
+            <li><a href="#workshop-1">畿央大学との合同研修会（H30.3.10）</a></li>
+            <li><a href="#workshop-2">国際学術交流会（H26.8.20-8.22）</a></li>
+            <li><a href="#workshop-3">大学院セミナー（H26.12.12）</a></li>
+            <li><a href="#workshop-4">大学院セミナー（H25.12.20）</a></li>
+            <li><a href="#workshop-5">大学院セミナー（H25.8.23）</a></li>
+          </ul>
+        </details>
+        <details class="pub-sidenav-group">
+          <summary class="pub-sidenav-heading">学会紀行</summary>
+          <ul class="pub-sidenav-years">
+            <li><a href="#conference">学会紀行の先頭へ</a></li>
+            <li><a href="#conference-1">第60回日本リハビリテーション医学会学術集会in福岡（R.5.6.29-7.2）</a></li>
+            <li><a href="#conference-2">第27回ペインリハビリテーション学会学術大会in名古屋（R.5.6.24-6.25）</a></li>
+            <li><a href="#conference-3">第26回ペインリハビリテーション学会学術大会in神戸（R.4.6.11-6.12）</a></li>
+            <li><a href="#conference-4">第12回日本運動器疼痛学会in東京（R.1.11.30-12.1）</a></li>
+            <li><a href="#conference-5">第11回欧州疼痛学会inバレンシア (R.1 9.4-9.7)</a></li>
+            <li><a href="#conference-6">第28回日本ペインリハビリテーション学会（R6）</a></li>
+            <li><a href="#conference-7">第27回日本ペインリハビリテーション学会（R5）</a></li>
+            <li><a href="#conference-8">第9回ベルト電極式骨格筋電気刺激法研究会（R5）</a></li>
+            <li><a href="#conference-9">第26回日本ペインリハビリテーション学会（R4）</a></li>
+            <li><a href="#conference-10">第54回日本運動・バイオメカニクス学会（R4）</a></li>
+            <li><a href="#conference-11">第56回日本脊椎脊髄病学会学術集会（R4）</a></li>
+            <li><a href="#conference-12">第10回日本筋骨格系理学療法学会 / 第2回日本バイオメカニクス応用理学療法学会（R4）</a></li>
+            <li><a href="#conference-13">第7回ベルト電極式骨格筋電気刺激法研究会 / 第25回日本ペインリハビリテーション学会（R3）</a></li>
+            <li><a href="#conference-14">第6回ベルト電極式骨格筋電気刺激法研究会（R1）</a></li>
+            <li><a href="#conference-15">第5回ベルト電極式骨格筋電気刺激法研究会 / 第23回日本ペインリハビリテーション学会（H30）</a></li>
+            <li><a href="#conference-16">第4回ベルト電極式骨格筋電気刺激法研究会 / 第22回日本ペインリハビリテーション学会（H29）</a></li>
+            <li><a href="#conference-17">日本理学療法士連盟（H28）</a></li>
+            <li><a href="#conference-18">第50回日本理学療法士学術大会など（H27）</a></li>
+            <li><a href="#conference-19">第49回日本理学療法士学術大会など（H26）</a></li>
+            <li><a href="#conference-20">第18回日本ペインリハビリテーション学会（H25）</a></li>
+            <li><a href="#conference-21">第47回日本理学療法士学術大会など（H24）</a></li>
+            <li><a href="#conference-22">第4回日本臨床バイオメカニクス学会（H23）</a></li>
+          </ul>
+        </details>
+        <details class="pub-sidenav-group">
+          <summary class="pub-sidenav-heading">スナップ写真</summary>
+          <ul class="pub-sidenav-years">
+            <li><a href="#snap">スナップ写真の先頭へ</a></li>
+            <li><a href="#snap-1">坂本教授就任記念祝賀会（R8.5）</a></li>
+            <li><a href="#snap-2">卒業生の皆さん（R5.3）</a></li>
+            <li><a href="#snap-3">R4 研究室セレモニー（R5.3）</a></li>
+            <li><a href="#snap-4">卒業生の皆さん (R4.3)</a></li>
+            <li><a href="#snap-5">R3 研究室セレモニー（R4.3）</a></li>
+            <li><a href="#snap-6">卒業生の皆さん（R3.3）</a></li>
+            <li><a href="#snap-7">R2 研究室セレモニー（R3.3.10）</a></li>
+            <li><a href="#snap-8">中野准教授壮行会（R2.3.11）</a></li>
+            <li><a href="#snap-9">R1 忘年会（R1.12.14）</a></li>
+            <li><a href="#snap-10">R1 ゼミ旅行（R1.10.12）</a></li>
+          </ul>
+        </details>
+        <!-- 900px以下では details が隠れるため、大項目だけを横並びで出す -->
+        <a href="#workshop" class="pub-sidenav-link photo-nav-compact">研修会の模様</a>
+        <a href="#conference" class="pub-sidenav-link photo-nav-compact">学会紀行</a>
+        <a href="#snap" class="pub-sidenav-link photo-nav-compact">スナップ写真</a>
+      </nav>
+    </aside>
+
+    <div class="pub-sections-col">
   <section class="section">
     <div class="container">
+
 
       <!-- 研究活動の様子 -->
       <div class="photo-section" id="research">
         <h2 class="photo-section-heading">研究活動の様子</h2>
-        <div class="photo-placeholder">写真は準備中です。</div>
+        <div class="photo-row">
+          <div class="photo-item">
+            <img width="300" height="199" src="images/gallery/research/1_Cryostat1.jpg" alt="クリオスタットによる凍結切片作製" loading="lazy">
+            <p class="photo-item-caption">クリオスタットによる凍結切片作製</p>
+          </div>
+          <div class="photo-item">
+            <img width="299" height="199" src="images/gallery/research/2_Western_Blotting1.jpg" alt="Western Blot法によるタンパク質解析" loading="lazy">
+            <p class="photo-item-caption">Western Blot法によるタンパク質解析</p>
+          </div>
+          <div class="photo-item">
+            <img width="300" height="199" src="images/gallery/research/3_HE_stain.jpg" alt="組織学的染色" loading="lazy">
+            <p class="photo-item-caption">組織学的染色</p>
+          </div>
+          <div class="photo-item">
+            <img width="300" height="199" src="images/gallery/research/4_PC_analysis.JPG" alt="PCによる組織像解析" loading="lazy">
+            <p class="photo-item-caption">PCによる組織像解析</p>
+          </div>
+          <div class="photo-item">
+            <img width="300" height="199" src="images/gallery/research/5_immunohistlogical_stain.JPG" alt="免疫組織化学的染色" loading="lazy">
+            <p class="photo-item-caption">免疫組織化学的染色</p>
+          </div>
+          <div class="photo-item">
+            <img width="300" height="199" src="images/gallery/research/6_DNA_extraction.JPG" alt="DNA抽出" loading="lazy">
+            <p class="photo-item-caption">DNA抽出</p>
+          </div>
+          <div class="photo-item">
+            <img width="300" height="199" src="images/gallery/research/7_PCR1.jpg" alt="PCR法による遺伝子解析" loading="lazy">
+            <p class="photo-item-caption">PCR法による遺伝子解析</p>
+          </div>
+          <div class="photo-item">
+            <img width="300" height="199" src="images/gallery/research/8_muscle_tension_test.JPG" alt="筋張力測定" loading="lazy">
+            <p class="photo-item-caption">筋張力測定</p>
+          </div>
+          <div class="photo-item">
+            <img width="480" height="318" src="images/gallery/research/9_Lab_meeting.JPG" alt="研究活動の様子 写真9" loading="lazy">
+            <p class="photo-item-caption photo-item-caption--long">毎週水曜日のミーティング（20：00～）・リサーチプログレス（月1回） ・ミニレクチャー （月1回）・文献抄読会 （月1回） ・学会発表等の予演会 （随時）</p>
+          </div>
+        </div>
       </div>
 
       <!-- 研修会の模様 -->
       <div class="photo-section" id="workshop">
         <h2 class="photo-section-heading">研修会の模様</h2>
-        <div class="photo-placeholder">写真は準備中です。</div>
+        <div class="photo-subsection" id="workshop-1">
+          <h3 class="photo-subsection-heading">畿央大学との合同研修会（H30.3.10）</h3>
+          <div class="photo-row">
+            <div class="photo-item">
+              <img width="501" height="376" src="images/gallery/workshop/2018_Kio_Univ/1_2018_Kio_Univ.jpg" alt="畿央大学との合同研修会（H30.3.10） 写真1" loading="lazy">
+              <p class="photo-item-caption photo-item-caption--long">畿央大学大学院神経リハビリテーション学研究室との合同研修会が開催されました．長崎大学からは5名が参加し，これまでの研究成果と今後の展望を報告して頂きました．</p>
+            </div>
+            <div class="photo-item">
+              <img width="280" height="210" src="images/gallery/workshop/2018_Kio_Univ/2_2018_Kio_Univ.jpg" alt="沖田教授が「筋性拘縮とその発生メカニズム」についてご講演されました．" loading="lazy">
+              <p class="photo-item-caption">沖田教授が「筋性拘縮とその発生メカニズム」についてご講演されました．</p>
+            </div>
+            <div class="photo-item">
+              <img width="280" height="210" src="images/gallery/workshop/2018_Kio_Univ/3_2018_Kio_Univ.jpg" alt="発表内容について金子教授と活発なディスカッションを行う本田君．" loading="lazy">
+              <p class="photo-item-caption">発表内容について金子教授と活発なディスカッションを行う本田君．</p>
+            </div>
+            <div class="photo-item">
+              <img width="255" height="300" src="images/gallery/workshop/2018_Kio_Univ/4_2018_Kio_Univ.jpg" alt="沖田教授に研究室を紹介していただきました．" loading="lazy">
+              <p class="photo-item-caption">沖田教授に研究室を紹介していただきました．</p>
+            </div>
+            <div class="photo-item">
+              <img width="250" height="300" src="images/gallery/workshop/2018_Kio_Univ/5_2018_Kio_Univ.jpg" alt="畿央大学の金子章道教授から総評を頂きました．貴重な御指摘ありがとうございました．" loading="lazy">
+              <p class="photo-item-caption">畿央大学の金子章道教授から総評を頂きました．貴重な御指摘ありがとうございました．</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="photo-subsection" id="workshop-2">
+          <h3 class="photo-subsection-heading">国際学術交流会（H26.8.20-8.22）</h3>
+          <div class="photo-row">
+            <div class="photo-item">
+              <img width="501" height="376" src="images/gallery/workshop/2014_Catholic_University_of_Pusan/1_2014_Catholic_University_of_Pusan.jpg" alt="国際学術交流会（H26.8.20-8.22） 写真1" loading="lazy">
+              <p class="photo-item-caption photo-item-caption--long">釜山カトリック大学校と長崎大学大学院の国際学術交流会が，今年は長崎で開催されました．釜山カトリック大学校から，教員2名，大学院生4名が来崎され，交流を深めました．</p>
+            </div>
+            <div class="photo-item">
+              <img width="280" height="210" src="images/gallery/workshop/2014_Catholic_University_of_Pusan/2_2014_Catholic_University_of_Pusan1.jpg" alt="国際学術交流会（H26.8.20-8.22） 写真2" loading="lazy">
+              <p class="photo-item-caption photo-item-caption--long">沖田教授が「New frontiers of physical therapy for musculoskeletal pain in Japan」についてご講話されました．</p>
+            </div>
+            <div class="photo-item">
+              <img width="280" height="210" src="images/gallery/workshop/2014_Catholic_University_of_Pusan/3_2014_Catholic_University_of_Pusan1.jpg" alt="国際学術交流会（H26.8.20-8.22） 写真3" loading="lazy">
+              <p class="photo-item-caption photo-item-caption--long">釜山カトリック大学校の金教授が「Nosocomial Infection in Physical Therapy Fields」についてご講話されました ．</p>
+            </div>
+            <div class="photo-item">
+              <img width="280" height="210" src="images/gallery/workshop/2014_Catholic_University_of_Pusan/4_2014_Catholic_University_of_Pusan1.jpg" alt="大学院生の発表も行われ，活発なディスカッションの場となりました．" loading="lazy">
+              <p class="photo-item-caption">大学院生の発表も行われ，活発なディスカッションの場となりました．</p>
+            </div>
+            <div class="photo-item">
+              <img width="280" height="210" src="images/gallery/workshop/2014_Catholic_University_of_Pusan/5_2014_Catholic_University_of_Pusan1.jpg" alt="本研究室の田中さんが他動張力測定のデモを行いました．" loading="lazy">
+              <p class="photo-item-caption">本研究室の田中さんが他動張力測定のデモを行いました．</p>
+            </div>
+            <div class="photo-item">
+              <img width="280" height="210" src="images/gallery/workshop/2014_Catholic_University_of_Pusan/6_2014_Catholic_University_of_Pusan1.jpg" alt="夜の懇親会にて開会の挨拶をされる沖田教授．" loading="lazy">
+              <p class="photo-item-caption">夜の懇親会にて開会の挨拶をされる沖田教授．</p>
+            </div>
+            <div class="photo-item">
+              <img width="280" height="210" src="images/gallery/workshop/2014_Catholic_University_of_Pusan/7_2014_Catholic_University_of_Pusan1.jpg" alt="懇親会はとても盛り上がり，夜遅くまで行われました．" loading="lazy">
+              <p class="photo-item-caption">懇親会はとても盛り上がり，夜遅くまで行われました．</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="photo-subsection" id="workshop-3">
+          <h3 class="photo-subsection-heading">大学院セミナー（H26.12.12）</h3>
+          <div class="photo-row">
+            <div class="photo-item">
+              <img width="500" height="375" src="images/gallery/workshop/2014_Seminar_Matsubara/1_2014_Seminar_Matsubara.jpg" alt="大学院セミナー（H26.12.12） 写真1" loading="lazy">
+              <p class="photo-item-caption photo-item-caption--long">松原貴子先生が特別講演「Exercise-induced hypoalgesiaの効果とそのメカニズム」をご講話されました．本研究室からも多くのメンバーが参加し，大変興味深く，貴重なお話を聞かせて頂きました．</p>
+            </div>
+            <div class="photo-item">
+              <img width="280" height="210" src="images/gallery/workshop/2014_Seminar_Matsubara/2_2014_Seminar_Matsubara1.jpg" alt="大学院セミナー（H26.12.12） 写真2" loading="lazy">
+              <p class="photo-item-caption photo-item-caption--long">シンポジウムとして本研究室の坂本准教授が「ラット膝関節炎モデルに対する患部ならびに遠隔部の運動が腫脹や痛みにおよぼす影響」について発表されました.</p>
+            </div>
+            <div class="photo-item">
+              <img width="280" height="210" src="images/gallery/workshop/2014_Seminar_Matsubara/3_2014_Seminar_Matsubara1.jpg" alt="大学院セミナー（H26.12.12） 写真3" loading="lazy">
+              <p class="photo-item-caption">本研究室の濱上君が「ラット足関節不動モデルに対する不動部以外の運動が痛みにおよぼす影響」について発表を行いました．</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="photo-subsection" id="workshop-4">
+          <h3 class="photo-subsection-heading">大学院セミナー（H25.12.20）</h3>
+          <div class="photo-row">
+            <div class="photo-item">
+              <img width="480" height="358" src="images/gallery/workshop/2013_Seminaar_Ota/1_2013_Seminaar_Ota1.jpg" alt="大学院セミナー（H25.12.20） 写真1" loading="lazy">
+              <p class="photo-item-caption photo-item-caption--long">太田仁史先生が特別講演「介護・終末期リハ/ケアの必要性と活動の展開のために」をご講話され，大変貴重なお話を聞かせて頂きました．</p>
+            </div>
+            <div class="photo-item">
+              <img width="280" height="210" src="images/gallery/workshop/2013_Seminaar_Ota/2_2013_Seminaar_Ota1.jpg" alt="大学院セミナー（H25.12.20） 写真2" loading="lazy">
+              <p class="photo-item-caption photo-item-caption--long">本研究室と共同研究を行っている青梅慶友病院の福田卓民先生が，実践報告として「青梅慶友病院におけるチームアプローチとしての拘縮対策」についてご講話されました.</p>
+            </div>
+            <div class="photo-item">
+              <img width="280" height="210" src="images/gallery/workshop/2013_Seminaar_Ota/3_2013_Seminaar_Ota1.jpg" alt="ミニレクチャーとして，本研究室の本田君が「拘縮の基礎」について講演を行いました．" loading="lazy">
+              <p class="photo-item-caption">ミニレクチャーとして，本研究室の本田君が「拘縮の基礎」について講演を行いました．</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="photo-subsection" id="workshop-5">
+          <h3 class="photo-subsection-heading">大学院セミナー（H25.8.23）</h3>
+          <div class="photo-row">
+            <div class="photo-item">
+              <img width="279" height="210" src="images/gallery/workshop/2013_Seminar_part2/1_2013_Seminar_part21.jpg" alt="大学院セミナー（H25.8.23） 写真1" loading="lazy">
+              <p class="photo-item-caption photo-item-caption--long">大学院セミナーとして「Inspiratory Muscle Injury - Evidence and Clinical Markers」について講演会が開催されました．本研究室から多数のメンバーが参加させて頂きました．</p>
+            </div>
+            <div class="photo-item">
+              <img width="280" height="210" src="images/gallery/workshop/2013_Seminar_part2/2_2013_Seminar_part21.jpg" alt="大学院セミナー（H25.8.23） 写真2" loading="lazy">
+              <p class="photo-item-caption photo-item-caption--long">大学院セミナーとして「Inspiratory Muscle Injury - Evidence and Clinical Markers」について講演会が開催されました．本研究室から多数のメンバーが参加させて頂きました．</p>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- 学会紀行 -->
       <div class="photo-section" id="conference">
         <h2 class="photo-section-heading">学会紀行</h2>
 
-        <div class="photo-subsection">
+        <div class="photo-subsection" id="conference-1">
+          <h3 class="photo-subsection-heading">第60回日本リハビリテーション医学会学術集会in福岡（R.5.6.29-7.2）</h3>
+          <div class="photo-row">
+            <div class="photo-item">
+              <img width="480" height="360" src="images/gallery/conference/2023_60thJARM/60thJARM_111.jpg" alt="第60回日本リハビリテーション医学会学術集会in福岡（R.5.6.29-7.2） 写真1" loading="lazy">
+              <p class="photo-item-caption photo-item-caption--long">第60回日本リハビリテーション医学会学術集会に本研究室のメンバーが参加してきました. 本研究室から口述4演題，沖田先生，片岡先生が共同研究を行っている青梅慶友病院から口述1演題の発表を行いました．</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="photo-subsection" id="conference-2">
+          <h3 class="photo-subsection-heading">第27回ペインリハビリテーション学会学術大会in名古屋（R.5.6.24-6.25）</h3>
+          <div class="photo-row">
+            <div class="photo-item">
+              <img width="480" height="359" src="images/gallery/conference/2023_27thJAPR/27thJAPR_11.jpg" alt="第27回ペインリハビリテーション学会学術大会in名古屋（R.5.6.24-6.25） 写真1" loading="lazy">
+              <p class="photo-item-caption photo-item-caption--long">第27回ペインリハビリテーション学会学術大会に本研究室のメンバーが参加してきました. 坂本准教授がファイザー社の企画講演，片岡先生が教育講演，西先生がシンポジウムにてご講演されました．また，本研究室から口述9演題，ポスター1演題の発表を行いました．</p>
+            </div>
+            <div class="photo-item">
+              <img width="280" height="210" src="images/gallery/conference/2023_27thJAPR/27thJAPR_21.jpg" alt="大会長の井上雅之先生から最優秀賞の表彰を受ける沖田星馬君．" loading="lazy">
+              <p class="photo-item-caption">大会長の井上雅之先生から最優秀賞の表彰を受ける沖田星馬君．</p>
+            </div>
+            <div class="photo-item">
+              <img width="279" height="209" src="images/gallery/conference/2023_27thJAPR/27thJAPR_31.jpg" alt="大会長の井上雅之先生から奨励賞の表彰を受ける片岡先生．" loading="lazy">
+              <p class="photo-item-caption">大会長の井上雅之先生から奨励賞の表彰を受ける片岡先生．</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="photo-subsection" id="conference-3">
+          <h3 class="photo-subsection-heading">第26回ペインリハビリテーション学会学術大会in神戸（R.4.6.11-6.12）</h3>
+          <div class="photo-row">
+            <div class="photo-item">
+              <img width="480" height="330" src="images/gallery/conference/2022_26thJAPR/26thJAPR_11.jpg" alt="第26回ペインリハビリテーション学会学術大会in神戸（R.4.6.11-6.12） 写真1" loading="lazy">
+              <p class="photo-item-caption photo-item-caption--long">第26回ペインリハビリテーション学会学術大会に本研究室のメンバーが参加してきました. 坂本准教授が教育講演にてご講演されました．また，本研究室から口述12演題の発表を行いました．</p>
+            </div>
+            <div class="photo-item">
+              <img width="280" height="260" src="images/gallery/conference/2022_26thJAPR/26thJAPR_21.jpg" alt="教育講演にてご講演される坂本准教授．" loading="lazy">
+              <p class="photo-item-caption">教育講演にてご講演される坂本准教授．</p>
+            </div>
+            <div class="photo-item">
+              <img width="280" height="259" src="images/gallery/conference/2022_26thJAPR/26thJAPR_31.jpg" alt="大会長の松原貴子先生から優秀賞の表彰を受ける後藤先生．" loading="lazy">
+              <p class="photo-item-caption">大会長の松原貴子先生から優秀賞の表彰を受ける後藤先生．</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="photo-subsection" id="conference-4">
+          <h3 class="photo-subsection-heading">第12回日本運動器疼痛学会in東京（R.1.11.30-12.1）</h3>
+          <div class="photo-row">
+            <div class="photo-item">
+              <img width="480" height="360" src="images/gallery/conference/2019_12thJAMP/12thJAMP_11.jpg" alt="第12回日本運動器疼痛学会in東京（R.1.11.30-12.1） 写真1" loading="lazy">
+              <p class="photo-item-caption photo-item-caption--long">第12回日本運動器疼痛学会に本研究室のメンバーが参加してきました. 沖田教授が教育研修講演の座長をされ，坂本准教授，片岡先生と研究室メンバーが口述演題の発表を行いました．</p>
+            </div>
+            <div class="photo-item">
+              <img width="280" height="210" src="images/gallery/conference/2019_12thJAMP/12thJAMP_21.jpg" alt="学会は六本木ヒルズ森タワーの49階で行われ，会場からは富士山が見えました．" loading="lazy">
+              <p class="photo-item-caption">学会は六本木ヒルズ森タワーの49階で行われ，会場からは富士山が見えました．</p>
+            </div>
+            <div class="photo-item">
+              <img width="280" height="210" src="images/gallery/conference/2019_12thJAMP/12thJAMP_31.jpg" alt="同じく会場から見える東京タワー．" loading="lazy">
+              <p class="photo-item-caption">同じく会場から見える東京タワー．</p>
+            </div>
+            <div class="photo-item">
+              <img width="280" height="210" src="images/gallery/conference/2019_12thJAMP/12thJAMP_41.jpg" alt="懇親会で談笑する沖田教授，森岡教授，松原教授（左から）．" loading="lazy">
+              <p class="photo-item-caption">懇親会で談笑する沖田教授，森岡教授，松原教授（左から）．</p>
+            </div>
+            <div class="photo-item">
+              <img width="280" height="210" src="images/gallery/conference/2019_12thJAMP/12thJAMP_51.jpg" alt="第12回日本運動器疼痛学会in東京（R.1.11.30-12.1） 写真5" loading="lazy">
+              <p class="photo-item-caption">松原研究室，森岡研究室と3研究室での懇親会が開催され，貴重な情報交換を行うことができました．</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="photo-subsection" id="conference-5">
+          <h3 class="photo-subsection-heading">第11回欧州疼痛学会inバレンシア (R.1 9.4-9.7)</h3>
+          <div class="photo-row">
+            <div class="photo-item">
+              <img width="480" height="404" src="images/gallery/conference/2019_11thEFIC/11thEFIC_11.jpg" alt="第11回欧州疼痛学会inバレンシア (R.1 9.4-9.7) 写真1" loading="lazy">
+              <p class="photo-item-caption photo-item-caption--long">第11回欧州疼痛学会に本研究室のメンバーが参加してきました. 坂本准教授と研究室メンバーがポスター4演題の発表を行いました.</p>
+            </div>
+            <div class="photo-item">
+              <img width="224" height="299" src="images/gallery/conference/2019_11thEFIC/11thEFIC_21.jpg" alt="研究内容について質問に答える坂本准教授．" loading="lazy">
+              <p class="photo-item-caption">研究内容について質問に答える坂本准教授．</p>
+            </div>
+            <div class="photo-item">
+              <img width="224" height="299" src="images/gallery/conference/2019_11thEFIC/11thEFIC_31.jpg" alt="研究内容について説明する佐々木君．" loading="lazy">
+              <p class="photo-item-caption">研究内容について説明する佐々木君．</p>
+            </div>
+            <div class="photo-item">
+              <img width="224" height="299" src="images/gallery/conference/2019_11thEFIC/11thEFIC_41.jpg" alt="これまでの研究成果を発表した石川さん．" loading="lazy">
+              <p class="photo-item-caption">これまでの研究成果を発表した石川さん．</p>
+            </div>
+            <div class="photo-item">
+              <img width="168" height="299" src="images/gallery/conference/2019_11thEFIC/11thEFIC_51.jpg" alt="研究内容を説明する竹下さん．" loading="lazy">
+              <p class="photo-item-caption">研究内容を説明する竹下さん．</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="photo-subsection" id="conference-6">
           <h3 class="photo-subsection-heading">第28回日本ペインリハビリテーション学会（R6）</h3>
           <div class="photo-row">
             <div class="photo-item">
-              <img src="写真/Motokawa_28th_JAPR_2024/DSC_96991.jpg" alt="元川さん 第28回日本ペインリハビリテーション学会" loading="lazy">
+              <img width="840" height="561" src="写真/Motokawa_28th_JAPR_2024/DSC_96991.jpg" alt="元川さん 第28回日本ペインリハビリテーション学会" loading="lazy">
               <p class="photo-item-caption">元川さん</p>
             </div>
           </div>
         </div>
 
-        <div class="photo-subsection">
+        <div class="photo-subsection" id="conference-7">
           <h3 class="photo-subsection-heading">第27回日本ペインリハビリテーション学会（R5）</h3>
           <div class="photo-row">
             <div class="photo-item">
-              <img src="写真/Kataoka_27th_JAPR_2023/Kataoka_27thJAP_20231.jpg" alt="片岡さん 第27回日本ペインリハビリテーション学会" loading="lazy">
+              <img width="240" height="180" src="写真/Kataoka_27th_JAPR_2023/Kataoka_27thJAP_20231.jpg" alt="片岡さん 第27回日本ペインリハビリテーション学会" loading="lazy">
               <p class="photo-item-caption">片岡さん</p>
             </div>
             <div class="photo-item">
-              <img src="写真/Seima_27th_JAPR_2023/Seima_27thJAPR_2023.jpg" alt="清間さん 第27回日本ペインリハビリテーション学会" loading="lazy">
+              <img width="160" height="213" src="写真/Seima_27th_JAPR_2023/Seima_27thJAPR_2023.jpg" alt="清間さん 第27回日本ペインリハビリテーション学会" loading="lazy">
               <p class="photo-item-caption">清間さん</p>
             </div>
           </div>
         </div>
 
-        <div class="photo-subsection">
+        <div class="photo-subsection" id="conference-8">
           <h3 class="photo-subsection-heading">第9回ベルト電極式骨格筋電気刺激法研究会（R5）</h3>
           <div class="photo-row">
             <div class="photo-item">
-              <img src="写真/Miyake_9th_BSES_2023/Miyake_9thBSES_20231.jpg" alt="三宅さん 第9回ベルト電極式骨格筋電気刺激法研究会" loading="lazy">
+              <img width="160" height="213" src="写真/Miyake_9th_BSES_2023/Miyake_9thBSES_20231.jpg" alt="三宅さん 第9回ベルト電極式骨格筋電気刺激法研究会" loading="lazy">
               <p class="photo-item-caption">三宅さん</p>
             </div>
             <div class="photo-item">
-              <img src="写真/Miyake_NagasakiUniv_2023/Miyake_NagasakiUniv_20231.jpg" alt="三宅さん 長崎大学" loading="lazy">
+              <img width="160" height="213" src="写真/Miyake_NagasakiUniv_2023/Miyake_NagasakiUniv_20231.jpg" alt="三宅さん 長崎大学" loading="lazy">
               <p class="photo-item-caption">三宅さん — 長崎大学</p>
             </div>
           </div>
         </div>
 
-        <div class="photo-subsection">
+        <div class="photo-subsection" id="conference-9">
           <h3 class="photo-subsection-heading">第26回日本ペインリハビリテーション学会（R4）</h3>
           <div class="photo-row">
             <div class="photo-item">
-              <img src="写真/Goto_26th_JAPR_2022/Goto_26th_JAPR_20221.jpg" alt="後藤さん 第26回日本ペインリハビリテーション学会" loading="lazy">
+              <img width="240" height="179" src="写真/Goto_26th_JAPR_2022/Goto_26th_JAPR_20221.jpg" alt="後藤さん 第26回日本ペインリハビリテーション学会" loading="lazy">
               <p class="photo-item-caption">後藤さん</p>
             </div>
           </div>
         </div>
 
-        <div class="photo-subsection">
+        <div class="photo-subsection" id="conference-10">
           <h3 class="photo-subsection-heading">第54回日本運動・バイオメカニクス学会（R4）</h3>
           <div class="photo-row">
             <div class="photo-item">
-              <img src="写真/Honda_54th_JSMBM_2022/Honda_54thJSMBM_20221.jpg" alt="本田さん 第54回日本運動・バイオメカニクス学会" loading="lazy">
+              <img width="160" height="212" src="写真/Honda_54th_JSMBM_2022/Honda_54thJSMBM_20221.jpg" alt="本田さん 第54回日本運動・バイオメカニクス学会" loading="lazy">
               <p class="photo-item-caption">本田さん</p>
             </div>
           </div>
         </div>
 
-        <div class="photo-subsection">
+        <div class="photo-subsection" id="conference-11">
           <h3 class="photo-subsection-heading">第56回日本脊椎脊髄病学会学術集会（R4）</h3>
           <div class="photo-row">
             <div class="photo-item">
-              <img src="写真/Motokawa_56th_JSPC_2022/Motokawa_56thJSPC_20221.jpg" alt="元川さん 第56回日本脊椎脊髄病学会学術集会" loading="lazy">
+              <img width="840" height="704" src="写真/Motokawa_56th_JSPC_2022/Motokawa_56thJSPC_20221.jpg" alt="元川さん 第56回日本脊椎脊髄病学会学術集会" loading="lazy">
               <p class="photo-item-caption">元川さん</p>
             </div>
           </div>
         </div>
 
-        <div class="photo-subsection">
+        <div class="photo-subsection" id="conference-12">
           <h3 class="photo-subsection-heading">第10回日本筋骨格系理学療法学会 / 第2回日本バイオメカニクス応用理学療法学会（R4）</h3>
           <div class="photo-row">
             <div class="photo-item">
-              <img src="写真/Sasaki_10th_JSMSPT_2022/Sasaki_10thJSMSPT_202221.jpg" alt="佐々木さん 第10回日本筋骨格系理学療法学会" loading="lazy">
+              <img width="158" height="212" src="写真/Sasaki_10th_JSMSPT_2022/Sasaki_10thJSMSPT_202221.jpg" alt="佐々木さん 第10回日本筋骨格系理学療法学会" loading="lazy">
               <p class="photo-item-caption">佐々木さん — 第10回日本筋骨格系理学療法学会</p>
             </div>
             <div class="photo-item">
-              <img src="写真/Sasaki_2nd_JSBAPT_2022/Sasaki_2ndJSBAPT_20221.jpg" alt="佐々木さん 第2回日本バイオメカニクス応用理学療法学会" loading="lazy">
+              <img width="160" height="213" src="写真/Sasaki_2nd_JSBAPT_2022/Sasaki_2ndJSBAPT_20221.jpg" alt="佐々木さん 第2回日本バイオメカニクス応用理学療法学会" loading="lazy">
               <p class="photo-item-caption">佐々木さん — 第2回日本バイオメカニクス応用理学療法学会</p>
             </div>
           </div>
         </div>
 
-        <div class="photo-subsection">
+        <div class="photo-subsection" id="conference-13">
           <h3 class="photo-subsection-heading">第7回ベルト電極式骨格筋電気刺激法研究会 / 第25回日本ペインリハビリテーション学会（R3）</h3>
           <div class="photo-row">
             <div class="photo-item">
-              <img src="写真/Kajiwara_7th_BSES_2021/Kajiwara_7thBSES_2021.jpg" alt="梶原さん 第7回BSES研究会" loading="lazy">
+              <img width="160" height="213" src="写真/Kajiwara_7th_BSES_2021/Kajiwara_7thBSES_2021.jpg" alt="梶原さん 第7回BSES研究会" loading="lazy">
               <p class="photo-item-caption">梶原さん — 第7回BSES研究会</p>
             </div>
             <div class="photo-item">
-              <img src="写真/Kataoka_25th_JAPR_2021/Kataoka_25thJAPR_2021.jpg" alt="片岡さん 第25回日本ペインリハビリテーション学会" loading="lazy">
+              <img width="180" height="239" src="写真/Kataoka_25th_JAPR_2021/Kataoka_25thJAPR_2021.jpg" alt="片岡さん 第25回日本ペインリハビリテーション学会" loading="lazy">
               <p class="photo-item-caption">片岡さん — 第25回日本ペインリハビリテーション学会</p>
             </div>
           </div>
         </div>
 
-        <div class="photo-subsection">
+        <div class="photo-subsection" id="conference-14">
           <h3 class="photo-subsection-heading">第6回ベルト電極式骨格筋電気刺激法研究会（R1）</h3>
           <div class="photo-row">
             <div class="photo-item">
-              <img src="写真/Honda_6th_BSES_2019/Honda_6thBSES_20191.jpg" alt="本田さん 第6回BSES研究会" loading="lazy">
+              <img width="159" height="188" src="写真/Honda_6th_BSES_2019/Honda_6thBSES_20191.jpg" alt="本田さん 第6回BSES研究会" loading="lazy">
               <p class="photo-item-caption">本田さん</p>
             </div>
           </div>
         </div>
 
-        <div class="photo-subsection">
+        <div class="photo-subsection" id="conference-15">
           <h3 class="photo-subsection-heading">第5回ベルト電極式骨格筋電気刺激法研究会 / 第23回日本ペインリハビリテーション学会（H30）</h3>
           <div class="photo-row">
             <div class="photo-item">
-              <img src="写真/Honda_5th_BSES_2018/Honda_5thBSES_20181.jpg" alt="本田さん 第5回BSES研究会" loading="lazy">
+              <img width="160" height="213" src="写真/Honda_5th_BSES_2018/Honda_5thBSES_20181.jpg" alt="本田さん 第5回BSES研究会" loading="lazy">
               <p class="photo-item-caption">本田さん — 第5回BSES研究会</p>
             </div>
             <div class="photo-item">
-              <img src="写真/Ohga_23rd_JAPR_2018/Ohga_23rdJAPR_20181.jpg" alt="大賀さん 第23回日本ペインリハビリテーション学会" loading="lazy">
+              <img width="255" height="300" src="写真/Ohga_23rd_JAPR_2018/Ohga_23rdJAPR_20181.jpg" alt="大賀さん 第23回日本ペインリハビリテーション学会" loading="lazy">
               <p class="photo-item-caption">大賀さん — 第23回日本ペインリハビリテーション学会</p>
             </div>
             <div class="photo-item">
-              <img src="写真/Nakabayashi_4th_JPTF_2018/Nakabayashi_4thJPTF_20181.jpg" alt="中林さん 日本理学療法士連盟" loading="lazy">
+              <img width="160" height="208" src="写真/Nakabayashi_4th_JPTF_2018/Nakabayashi_4thJPTF_20181.jpg" alt="中林さん 日本理学療法士連盟" loading="lazy">
               <p class="photo-item-caption">中林さん — 日本理学療法士連盟</p>
             </div>
             <div class="photo-item">
-              <img src="写真/Tanaka_NagasakiUniv_2018/Tanaka_NagasakiUniv_20181.jpg" alt="田中さん 長崎大学" loading="lazy">
+              <img width="160" height="212" src="写真/Tanaka_NagasakiUniv_2018/Tanaka_NagasakiUniv_20181.jpg" alt="田中さん 長崎大学" loading="lazy">
               <p class="photo-item-caption">田中さん — 長崎大学</p>
             </div>
           </div>
         </div>
 
-        <div class="photo-subsection">
+        <div class="photo-subsection" id="conference-16">
           <h3 class="photo-subsection-heading">第4回ベルト電極式骨格筋電気刺激法研究会 / 第22回日本ペインリハビリテーション学会（H29）</h3>
           <div class="photo-row">
             <div class="photo-item">
-              <img src="写真/Kataoka_4th_BSES_2017/Kataoka_4thBSES_20171.jpg" alt="片岡さん 第4回BSES研究会" loading="lazy">
+              <img width="160" height="212" src="写真/Kataoka_4th_BSES_2017/Kataoka_4thBSES_20171.jpg" alt="片岡さん 第4回BSES研究会" loading="lazy">
               <p class="photo-item-caption">片岡さん — 第4回BSES研究会</p>
             </div>
             <div class="photo-item">
-              <img src="写真/Sasaki_22nd_JAPR_2017/Sasaki_22ndJAPR_20171.jpg" alt="佐々木さん 第22回日本ペインリハビリテーション学会" loading="lazy">
+              <img width="240" height="180" src="写真/Sasaki_22nd_JAPR_2017/Sasaki_22ndJAPR_20171.jpg" alt="佐々木さん 第22回日本ペインリハビリテーション学会" loading="lazy">
               <p class="photo-item-caption">佐々木さん — 第22回日本ペインリハビリテーション学会</p>
             </div>
             <div class="photo-item">
-              <img src="写真/Sasabe_NagasakiUniv_2012/Sasaki_NagasakiUniv_2017.jpg" alt="佐々木さん 長崎大学" loading="lazy">
+              <img width="160" height="243" src="写真/Sasabe_NagasakiUniv_2012/Sasaki_NagasakiUniv_2017.jpg" alt="佐々木さん 長崎大学" loading="lazy">
               <p class="photo-item-caption">佐々木さん — 長崎大学</p>
             </div>
           </div>
         </div>
 
-        <div class="photo-subsection">
+        <div class="photo-subsection" id="conference-17">
           <h3 class="photo-subsection-heading">日本理学療法士連盟（H28）</h3>
           <div class="photo-row">
             <div class="photo-item">
-              <img src="写真/Kawachi_NagasakiUniv_2016/Kawachi_NagasakiUniv_20161.jpg" alt="河内さん 長崎大学" loading="lazy">
+              <img width="240" height="180" src="写真/Kawachi_NagasakiUniv_2016/Kawachi_NagasakiUniv_20161.jpg" alt="河内さん 長崎大学" loading="lazy">
               <p class="photo-item-caption">河内さん — 長崎大学</p>
             </div>
             <div class="photo-item">
-              <img src="写真/Kawachi_JPTF_vol18/Kawachi_JPTF_vol181.jpg" alt="河内さん 日本理学療法士連盟誌 Vol.18" loading="lazy">
+              <img width="160" height="230" src="写真/Kawachi_JPTF_vol18/Kawachi_JPTF_vol181.jpg" alt="河内さん 日本理学療法士連盟誌 Vol.18" loading="lazy">
               <p class="photo-item-caption">河内さん — 日本理学療法士連盟誌 Vol.18</p>
             </div>
           </div>
         </div>
 
-        <div class="photo-subsection">
+        <div class="photo-subsection" id="conference-18">
           <h3 class="photo-subsection-heading">第50回日本理学療法士学術大会など（H27）</h3>
           <div class="photo-row">
             <div class="photo-item">
-              <img src="写真/Goto_50th_JPTA_2015/Goto_50thJPTA_20151.jpg" alt="後藤さん 第50回日本理学療法士学術大会" loading="lazy">
+              <img width="840" height="1120" src="写真/Goto_50th_JPTA_2015/Goto_50thJPTA_20151.jpg" alt="後藤さん 第50回日本理学療法士学術大会" loading="lazy">
               <p class="photo-item-caption">後藤さん — 第50回日本理学療法士学術大会</p>
             </div>
             <div class="photo-item">
-              <img src="写真/Honda_47th_JSMBM_2015/Honda_47thJSMBM_20151.jpg" alt="本田さん 第47回日本運動・バイオメカニクス学会" loading="lazy">
+              <img width="840" height="630" src="写真/Honda_47th_JSMBM_2015/Honda_47thJSMBM_20151.jpg" alt="本田さん 第47回日本運動・バイオメカニクス学会" loading="lazy">
               <p class="photo-item-caption">本田さん — 第47回日本運動・バイオメカニクス学会</p>
             </div>
             <div class="photo-item">
-              <img src="写真/Nakano_20th_JSPM_2015/Nakano_20thJSPM_20151.jpg" alt="中野さん 第20回日本脊髄障害医学会" loading="lazy">
+              <img width="840" height="1210" src="写真/Nakano_20th_JSPM_2015/Nakano_20thJSPM_20151.jpg" alt="中野さん 第20回日本脊髄障害医学会" loading="lazy">
               <p class="photo-item-caption">中野さん — 第20回日本脊髄障害医学会</p>
             </div>
             <div class="photo-item">
-              <img src="写真/Teranaka_20th_JAPR_2015/Teranaka_20thJAPR_20151.jpg" alt="寺中さん 第20回日本ペインリハビリテーション学会" loading="lazy">
+              <img width="160" height="230" src="写真/Teranaka_20th_JAPR_2015/Teranaka_20thJAPR_20151.jpg" alt="寺中さん 第20回日本ペインリハビリテーション学会" loading="lazy">
               <p class="photo-item-caption">寺中さん — 第20回日本ペインリハビリテーション学会</p>
             </div>
           </div>
         </div>
 
-        <div class="photo-subsection">
+        <div class="photo-subsection" id="conference-19">
           <h3 class="photo-subsection-heading">第49回日本理学療法士学術大会など（H26）</h3>
           <div class="photo-row">
             <div class="photo-item">
-              <img src="写真/Chuganji_NagasakiUniv_2014/Chuganji_NagasakiUniv_20141.jpg" alt="仲願寺さん 長崎大学" loading="lazy">
+              <img width="480" height="640" src="写真/Chuganji_NagasakiUniv_2014/Chuganji_NagasakiUniv_20141.jpg" alt="仲願寺さん 長崎大学" loading="lazy">
               <p class="photo-item-caption">仲願寺さん — 長崎大学</p>
             </div>
             <div class="photo-item">
-              <img src="写真/Sakamoto_JPTS_2014/Sakamoto_JPTS_20141.jpg" alt="坂本さん 理学療法サイエンス" loading="lazy">
+              <img width="840" height="630" src="写真/Sakamoto_JPTS_2014/Sakamoto_JPTS_20141.jpg" alt="坂本さん 理学療法サイエンス" loading="lazy">
               <p class="photo-item-caption">坂本さん — 理学療法サイエンス</p>
             </div>
             <div class="photo-item">
-              <img src="写真/Teranaka_PainResearch_2014/Teranaka_PainResearch_20141.jpg" alt="寺中さん Pain Research" loading="lazy">
+              <img width="160" height="283" src="写真/Teranaka_PainResearch_2014/Teranaka_PainResearch_20141.jpg" alt="寺中さん Pain Research" loading="lazy">
               <p class="photo-item-caption">寺中さん — Pain Research</p>
             </div>
             <div class="photo-item">
-              <img src="写真/Yoshimura_49th_JPTA_2014/Yoshimura_49thJPTA_20141.jpg" alt="吉村さん 第49回日本理学療法士学術大会" loading="lazy">
+              <img width="160" height="213" src="写真/Yoshimura_49th_JPTA_2014/Yoshimura_49thJPTA_20141.jpg" alt="吉村さん 第49回日本理学療法士学術大会" loading="lazy">
               <p class="photo-item-caption">吉村さん — 第49回日本理学療法士学術大会</p>
             </div>
           </div>
         </div>
 
-        <div class="photo-subsection">
+        <div class="photo-subsection" id="conference-20">
           <h3 class="photo-subsection-heading">第18回日本ペインリハビリテーション学会（H25）</h3>
           <div class="photo-row">
             <div class="photo-item">
-              <img src="写真/Hamaue_Chuganji_18th_JAPR_2013/Hamaue_Chuganji_18thJAPR_20131.jpg" alt="浜上さん 仲願寺さん 第18回日本ペインリハビリテーション学会" loading="lazy">
+              <img width="239" height="179" src="写真/Hamaue_Chuganji_18th_JAPR_2013/Hamaue_Chuganji_18thJAPR_20131.jpg" alt="浜上さん 仲願寺さん 第18回日本ペインリハビリテーション学会" loading="lazy">
               <p class="photo-item-caption">浜上さん・仲願寺さん</p>
             </div>
             <div class="photo-item">
-              <img src="写真/Yoshida_JPTS_2013/Yoshida_JPTS_20131.jpg" alt="吉田さん 理学療法サイエンス" loading="lazy">
+              <img width="840" height="1187" src="写真/Yoshida_JPTS_2013/Yoshida_JPTS_20131.jpg" alt="吉田さん 理学療法サイエンス" loading="lazy">
               <p class="photo-item-caption">吉田さん — 理学療法サイエンス</p>
             </div>
           </div>
         </div>
 
-        <div class="photo-subsection">
+        <div class="photo-subsection" id="conference-21">
           <h3 class="photo-subsection-heading">第47回日本理学療法士学術大会など（H24）</h3>
           <div class="photo-row">
             <div class="photo-item">
-              <img src="写真/Sasabe_NagasakiUniv_2012/Sasabe_NagasakiUniv_20121.jpg" alt="笹部さん 長崎大学" loading="lazy">
+              <img width="160" height="213" src="写真/Sasabe_NagasakiUniv_2012/Sasabe_NagasakiUniv_20121.jpg" alt="笹部さん 長崎大学" loading="lazy">
               <p class="photo-item-caption">笹部さん — 長崎大学</p>
             </div>
             <div class="photo-item">
-              <img src="写真/Sekino_JCFI_2012/Sekino_JCMI_201211.jpg" alt="関野さん 学術集会 2012" loading="lazy">
+              <img width="240" height="177" src="写真/Sekino_JCFI_2012/Sekino_JCMI_201211.jpg" alt="関野さん 学術集会 2012" loading="lazy">
               <p class="photo-item-caption">関野さん — 学術集会</p>
             </div>
             <div class="photo-item">
-              <img src="写真/Sekino_NagasakiUniv_2012/Sekino_NagasakiUniv_20121.jpg" alt="関野さん 長崎大学" loading="lazy">
+              <img width="160" height="210" src="写真/Sekino_NagasakiUniv_2012/Sekino_NagasakiUniv_20121.jpg" alt="関野さん 長崎大学" loading="lazy">
               <p class="photo-item-caption">関野さん — 長崎大学</p>
             </div>
             <div class="photo-item">
-              <img src="写真/Sekino_Yoshino_47th_JPTA_2012/Sekino_Yoshino_47thJPTA_20121.jpg" alt="関野さん 吉野さん 第47回日本理学療法士学術大会" loading="lazy">
+              <img width="239" height="179" src="写真/Sekino_Yoshino_47th_JPTA_2012/Sekino_Yoshino_47thJPTA_20121.jpg" alt="関野さん 吉野さん 第47回日本理学療法士学術大会" loading="lazy">
               <p class="photo-item-caption">関野さん・吉野さん — 第47回日本理学療法士学術大会</p>
             </div>
           </div>
         </div>
 
-        <div class="photo-subsection">
+        <div class="photo-subsection" id="conference-22">
           <h3 class="photo-subsection-heading">第4回日本臨床バイオメカニクス学会（H23）</h3>
           <div class="photo-row">
             <div class="photo-item">
-              <img src="写真/Sekino_4th_JAMP_2011/Sekino_4thJAMP11.jpg" alt="関野さん 第4回日本臨床バイオメカニクス学会" loading="lazy">
+              <img width="160" height="213" src="写真/Sekino_4th_JAMP_2011/Sekino_4thJAMP11.jpg" alt="関野さん 第4回日本臨床バイオメカニクス学会" loading="lazy">
               <p class="photo-item-caption">関野さん</p>
             </div>
           </div>
@@ -313,9 +629,289 @@
       <!-- スナップ写真 -->
       <div class="photo-section" id="snap">
         <h2 class="photo-section-heading">スナップ写真</h2>
-        <div class="photo-placeholder">写真は準備中です。</div>
+        <div class="photo-subsection" id="snap-1">
+          <h3 class="photo-subsection-heading">坂本教授就任記念祝賀会（R8.5）</h3>
+          <p class="photo-lead">本年度より教授に就任された坂本教授の教授就任記念祝賀会が開催されました．</p>
+          <div class="photo-row">
+            <div class="photo-item">
+              <img width="500" height="332" src="images/gallery/snap/2026_syukugakai/2025_syukugakai_3.jpg" alt="ご来賓の先生方との記念撮影会．坂本教授夫妻（中央）．" loading="lazy">
+              <p class="photo-item-caption">ご来賓の先生方との記念撮影会．坂本教授夫妻（中央）．</p>
+            </div>
+            <div class="photo-item">
+              <img width="300" height="170" src="images/gallery/snap/2026_syukugakai/2025_syukugakai_6.jpg" alt="大分大学福祉健康科学部 理学療法コース 川上敬介教授からの御祝辞．" loading="lazy">
+              <p class="photo-item-caption">大分大学福祉健康科学部 理学療法コース 川上敬介教授からの御祝辞．</p>
+            </div>
+            <div class="photo-item">
+              <img width="300" height="170" src="images/gallery/snap/2026_syukugakai/2025_syukugakai_5.jpg" alt="神戸学院大学総合リハビリテーション学部 理学療法学科 松原貴子教授からの御祝辞．" loading="lazy">
+              <p class="photo-item-caption">神戸学院大学総合リハビリテーション学部 理学療法学科 松原貴子教授からの御祝辞．</p>
+            </div>
+            <div class="photo-item">
+              <img width="300" height="170" src="images/gallery/snap/2026_syukugakai/2025_syukugakai_1.JPG" alt="坂本教授就任記念祝賀会（R8.5） 写真4" loading="lazy">
+            </div>
+            <div class="photo-item">
+              <img width="300" height="170" src="images/gallery/snap/2026_syukugakai/2025_syukugakai_2.JPG" alt="多くの祝花に彩られ，華やかな会場となりました．" loading="lazy">
+              <p class="photo-item-caption">多くの祝花に彩られ，華やかな会場となりました．</p>
+            </div>
+            <div class="photo-item">
+              <img width="350" height="212" src="images/gallery/snap/2026_syukugakai/2025_syukugakai_4.jpg" alt="本締めのご挨拶をされる沖田教授．" loading="lazy">
+              <p class="photo-item-caption">本締めのご挨拶をされる沖田教授．</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="photo-subsection" id="snap-2">
+          <h3 class="photo-subsection-heading">卒業生の皆さん（R5.3）</h3>
+          <p class="photo-lead">本年度は，新型コロナウイルスの感染対策をしたうえで卒業式が行われました．本研究室室からは修士課程1名，学部生5名の方々が卒業されました．</p>
+          <div class="photo-row">
+            <div class="photo-item">
+              <img width="840" height="1120" src="images/gallery/snap/2023_Graduation_Celemony/2023_Graduation_Celemony_11.jpg" alt="沖田教授，坂本准教授と修士課程を修了された野元君（中央）．" loading="lazy">
+              <p class="photo-item-caption">沖田教授，坂本准教授と修士課程を修了された野元君（中央）．</p>
+            </div>
+            <div class="photo-item">
+              <img width="224" height="298" src="images/gallery/snap/2023_Graduation_Celemony/2023_Graduation_Celemony_2.jpg" alt="沖田教授，本田助教とゼミ生の石木君，孝橋さん（左から）．" loading="lazy">
+              <p class="photo-item-caption">沖田教授，本田助教とゼミ生の石木君，孝橋さん（左から）．</p>
+            </div>
+            <div class="photo-item">
+              <img width="224" height="298" src="images/gallery/snap/2023_Graduation_Celemony/2023_Graduation_Celemony_3.jpg" alt="折口教授とゼミ生の平本さん．" loading="lazy">
+              <p class="photo-item-caption">折口教授とゼミ生の平本さん．</p>
+            </div>
+            <div class="photo-item">
+              <img width="224" height="298" src="images/gallery/snap/2023_Graduation_Celemony/2023_Graduation_Celemony_4.jpg" alt="坂本准教授とゼミ生の小川君，福山さん（左から）" loading="lazy">
+              <p class="photo-item-caption">坂本准教授とゼミ生の小川君，福山さん（左から）</p>
+            </div>
+            <div class="photo-item">
+              <img width="224" height="298" src="images/gallery/snap/2023_Graduation_Celemony/2023_Graduation_Celemony_5.jpg" alt="研究室の先生方とゼミ生で集合写真を撮りました．" loading="lazy">
+              <p class="photo-item-caption">研究室の先生方とゼミ生で集合写真を撮りました．</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="photo-subsection" id="snap-3">
+          <h3 class="photo-subsection-heading">R4 研究室セレモニー（R5.3）</h3>
+          <div class="photo-row">
+            <div class="photo-item">
+              <img width="840" height="630" src="images/gallery/snap/2023_Lab_Celemony/2023_Lab_Celemony_11.jpg" alt="R4 研究室セレモニー（R5.3） 写真1" loading="lazy">
+              <p class="photo-item-caption photo-item-caption--long">本年度で研究室を卒業される方々のセレモニーと４月からカナダのブリティッシュコロンビア大学へ留学される本田助教の壮行会が行われました．</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="photo-subsection" id="snap-4">
+          <h3 class="photo-subsection-heading">卒業生の皆さん (R4.3)</h3>
+          <p class="photo-lead">本年度は，新型コロナウイルスの感染対策をしたうえで卒業式が行われました．本研究室室からは修士課程3名，学部生6名の方々が卒業されました．</p>
+          <div class="photo-row">
+            <div class="photo-item">
+              <img width="224" height="298" src="images/gallery/snap/2022_Graduation_Celemony/2022_Graduation_Celemony_1.jpg" alt="沖田教授，本田助教と修士課程を修了された吉村さん（中央）．" loading="lazy">
+              <p class="photo-item-caption">沖田教授，本田助教と修士課程を修了された吉村さん（中央）．</p>
+            </div>
+            <div class="photo-item">
+              <img width="224" height="298" src="images/gallery/snap/2022_Graduation_Celemony/2022_Graduation_Celemony_2.jpg" alt="坂本准教授と修士課程を修了された本川さん，宮原君（左から）．" loading="lazy">
+              <p class="photo-item-caption">坂本准教授と修士課程を修了された本川さん，宮原君（左から）．</p>
+            </div>
+            <div class="photo-item">
+              <img width="224" height="298" src="images/gallery/snap/2022_Graduation_Celemony/2022_Graduation_Celemony_3.jpg" alt="沖田教授とゼミ生の前田君，三宅君（左から）．" loading="lazy">
+              <p class="photo-item-caption">沖田教授とゼミ生の前田君，三宅君（左から）．</p>
+            </div>
+            <div class="photo-item">
+              <img width="224" height="298" src="images/gallery/snap/2022_Graduation_Celemony/2022_Graduation_Celemony_41.jpg" alt="折口教授とゼミ生の村上さん，笹原さん（左から）．" loading="lazy">
+              <p class="photo-item-caption">折口教授とゼミ生の村上さん，笹原さん（左から）．</p>
+            </div>
+            <div class="photo-item">
+              <img width="224" height="298" src="images/gallery/snap/2022_Graduation_Celemony/2022_Graduation_Celemony_51.jpg" alt="坂本准教授とゼミ生の吉梅さん，江島さん（左から）．" loading="lazy">
+              <p class="photo-item-caption">坂本准教授とゼミ生の吉梅さん，江島さん（左から）．</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="photo-subsection" id="snap-5">
+          <h3 class="photo-subsection-heading">R3 研究室セレモニー（R4.3）</h3>
+          <div class="photo-row">
+            <div class="photo-item">
+              <img width="480" height="360" src="images/gallery/snap/2022_Lab_Celemony/2022_Lab_Celemony_1.jpg" alt="本年度で研究室を卒業される方々のセレモニーが行われました．" loading="lazy">
+              <p class="photo-item-caption">本年度で研究室を卒業される方々のセレモニーが行われました．</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="photo-subsection" id="snap-6">
+          <h3 class="photo-subsection-heading">卒業生の皆さん（R3.3）</h3>
+          <p class="photo-lead">本年度は，新型コロナウイルスの感染対策をしたうえで卒業式が行われました．本研究室室からは博士課程1名，修士課程3名，学部生8名の方々が卒業されました．</p>
+          <div class="photo-row">
+            <div class="photo-item">
+              <img width="224" height="271" src="images/gallery/snap/2021_Graduation_Celemony/2021_Graduation_Celemony_11.jpg" alt="卒業生の皆さん（R3.3） 写真1" loading="lazy">
+              <p class="photo-item-caption">佐々木君が博士課程を卒業されました．今後は本研究室の客員研究員として研究を続けられます．</p>
+            </div>
+            <div class="photo-item">
+              <img width="279" height="212" src="images/gallery/snap/2021_Graduation_Celemony/2021_Graduation_Celemony_21.jpg" alt="沖田教授，坂本准教授と修士課程を修了された坂本君，盛田さん，中川君（左から）．" loading="lazy">
+              <p class="photo-item-caption">沖田教授，坂本准教授と修士課程を修了された坂本君，盛田さん，中川君（左から）．</p>
+            </div>
+            <div class="photo-item">
+              <img width="280" height="210" src="images/gallery/snap/2021_Graduation_Celemony/2021_Graduation_Celemony_31.jpg" alt="沖田教授，本田助教とゼミ生の稲富君，平島君，江崎さん（左から）．" loading="lazy">
+              <p class="photo-item-caption">沖田教授，本田助教とゼミ生の稲富君，平島君，江崎さん（左から）．</p>
+            </div>
+            <div class="photo-item">
+              <img width="224" height="270" src="images/gallery/snap/2021_Graduation_Celemony/2021_Graduation_Celemony_4.jpg" alt="折口教授とゼミ生の神宮さん，真栄城さん（左から，古庄さんは欠席されました．）" loading="lazy">
+              <p class="photo-item-caption">折口教授とゼミ生の神宮さん，真栄城さん（左から，古庄さんは欠席されました．）</p>
+            </div>
+            <div class="photo-item">
+              <img width="224" height="259" src="images/gallery/snap/2021_Graduation_Celemony/2021_Graduation_Celemony_5.jpg" alt="坂本准教授とゼミ生の菅君，土橋さん（左から）．" loading="lazy">
+              <p class="photo-item-caption">坂本准教授とゼミ生の菅君，土橋さん（左から）．</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="photo-subsection" id="snap-7">
+          <h3 class="photo-subsection-heading">R2 研究室セレモニー（R3.3.10）</h3>
+          <div class="photo-row">
+            <div class="photo-item">
+              <img width="480" height="360" src="images/gallery/snap/2021_Lab_Celemony/2021_Lab_Celemony_1.jpg" alt="本年度で研究室を卒業される方々，栄転される方々のセレモニーが行われました．" loading="lazy">
+              <p class="photo-item-caption">本年度で研究室を卒業される方々，栄転される方々のセレモニーが行われました．</p>
+            </div>
+            <div class="photo-item">
+              <img width="280" height="210" src="images/gallery/snap/2021_Lab_Celemony/2021_Lab_Celemony_21.jpg" alt="R2 研究室セレモニー（R3.3.10） 写真2" loading="lazy">
+              <p class="photo-item-caption photo-item-caption--long">沖田教授と田中さん，大賀君（左から）． R3年度より田中さんは聖隷クリストファー大学の助教に，大賀君は神戸学院大学の助教に着任されます．</p>
+            </div>
+            <div class="photo-item">
+              <img width="280" height="209" src="images/gallery/snap/2021_Lab_Celemony/2021_Lab_Celemony_3.jpg" alt="沖田教授と本研究室を卒業される研究協力員の村田さんと石川さん（左から）." loading="lazy">
+              <p class="photo-item-caption">沖田教授と本研究室を卒業される研究協力員の村田さんと石川さん（左から）.</p>
+            </div>
+            <div class="photo-item">
+              <img width="280" height="210" src="images/gallery/snap/2021_Lab_Celemony/2021_Lab_Celemony_41.jpg" alt="R2 研究室セレモニー（R3.3.10） 写真4" loading="lazy">
+              <p class="photo-item-caption photo-item-caption--long">修士課程を修了する坂本君，盛田さん，中川君，博士課程を修了する佐々木君（左から）．坂本君と中川君は博士課程に進学し，盛田さんは研究協力員，佐々木君は客員研究員として本研究室で研究を続けられます．</p>
+            </div>
+            <div class="photo-item">
+              <img width="280" height="209" src="images/gallery/snap/2021_Lab_Celemony/2021_Lab_Celemony_5.jpg" alt="沖田教授から卒業および栄転される方々に向けて温かいお言葉を頂きました．" loading="lazy">
+              <p class="photo-item-caption">沖田教授から卒業および栄転される方々に向けて温かいお言葉を頂きました．</p>
+            </div>
+            <div class="photo-item">
+              <img width="280" height="209" src="images/gallery/snap/2021_Lab_Celemony/2021_Lab_Celemony_6.jpg" alt="坂本准教授が栄転される方々へ激励のご挨拶をされました．" loading="lazy">
+              <p class="photo-item-caption">坂本准教授が栄転される方々へ激励のご挨拶をされました．</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="photo-subsection" id="snap-8">
+          <h3 class="photo-subsection-heading">中野准教授壮行会（R2.3.11）</h3>
+          <div class="photo-row">
+            <div class="photo-item">
+              <img width="500" height="374" src="images/gallery/snap/2020_Lab_Celemony/2020_Lab_Celemony_11.jpg" alt="中野准教授壮行会（R2.3.11） 写真1" loading="lazy">
+              <p class="photo-item-caption photo-item-caption--long">R2年度より，関西医科大学に新設予定のリハビリテーション学部（設置準備室）の教授に着任される中野准教授の壮行会が行われました．</p>
+            </div>
+            <div class="photo-item">
+              <img width="280" height="210" src="images/gallery/snap/2020_Lab_Celemony/2020_Lab_Celemony_21.jpg" alt="本研究室から，中野准教授へ激励の意を込めて記念品が贈られました." loading="lazy">
+              <p class="photo-item-caption">本研究室から，中野准教授へ激励の意を込めて記念品が贈られました.</p>
+            </div>
+            <div class="photo-item">
+              <img width="280" height="210" src="images/gallery/snap/2020_Lab_Celemony/2020_Lab_Celemony_31.jpg" alt="中野准教授から，研究室への記念品を寄贈していただきました。" loading="lazy">
+              <p class="photo-item-caption">中野准教授から，研究室への記念品を寄贈していただきました。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="photo-subsection" id="snap-9">
+          <h3 class="photo-subsection-heading">R1 忘年会（R1.12.14）</h3>
+          <div class="photo-row">
+            <div class="photo-item">
+              <img width="505" height="378" src="images/gallery/snap/2019_bounenkai/2019_bounenkai_11.jpg" alt="R1 忘年会（R1.12.14） 写真1" loading="lazy">
+              <p class="photo-item-caption">令和1年度研究室忘年会が開催され，研究室メンバーと学部ゼミ生合わせて29名にご参加いただきました．</p>
+            </div>
+            <div class="photo-item">
+              <img width="280" height="210" src="images/gallery/snap/2019_bounenkai/2019_bounenkai_21.jpg" alt="沖田教授が，研究室の1年間の総括を述べられ，乾杯のご挨拶をされました．" loading="lazy">
+              <p class="photo-item-caption">沖田教授が，研究室の1年間の総括を述べられ，乾杯のご挨拶をされました．</p>
+            </div>
+            <div class="photo-item">
+              <img width="282" height="210" src="images/gallery/snap/2019_bounenkai/2019_bounenkai_31.jpg" alt="研究室のメンバーに激励の意を込めて，折口教授がご挨拶されました." loading="lazy">
+              <p class="photo-item-caption">研究室のメンバーに激励の意を込めて，折口教授がご挨拶されました.</p>
+            </div>
+            <div class="photo-item">
+              <img width="280" height="210" src="images/gallery/snap/2019_bounenkai/2019_bounenkai_41.jpg" alt="坂本准教授が，今年の振り返りと来年に向けての激励の言葉を述べられました." loading="lazy">
+              <p class="photo-item-caption">坂本准教授が，今年の振り返りと来年に向けての激励の言葉を述べられました.</p>
+            </div>
+            <div class="photo-item">
+              <img width="300" height="210" src="images/gallery/snap/2019_bounenkai/2019_bounenkai_51.jpg" alt="R1 忘年会（R1.12.14） 写真5" loading="lazy">
+              <p class="photo-item-caption">沖田教授を囲み談笑する，研究室メンバーの梶原君，大賀君，佐々木君と，ゼミ生の吉村さん，平島くん（左から）．</p>
+            </div>
+            <div class="photo-item">
+              <img width="292" height="219" src="images/gallery/snap/2019_bounenkai/2019_bounenkai_61.jpg" alt="忘年会は三次会のカラオケまで盛り上がり，非常に有意義な時間となりました．" loading="lazy">
+              <p class="photo-item-caption">忘年会は三次会のカラオケまで盛り上がり，非常に有意義な時間となりました．</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="photo-subsection" id="snap-10">
+          <h3 class="photo-subsection-heading">R1 ゼミ旅行（R1.10.12）</h3>
+          <div class="photo-row">
+            <div class="photo-item">
+              <img width="480" height="360" src="images/gallery/snap/2019_zemiryokou/2019_zemiryokou_11.jpg" alt="学部ゼミ3年生の歓迎会を兼ねたゼミ旅行が行われました．" loading="lazy">
+              <p class="photo-item-caption">学部ゼミ3年生の歓迎会を兼ねたゼミ旅行が行われました．</p>
+            </div>
+            <div class="photo-item">
+              <img width="225" height="299" src="images/gallery/snap/2019_zemiryokou/2019_zemiryokou_21.jpg" alt="R1 ゼミ旅行（R1.10.12） 写真2" loading="lazy">
+              <p class="photo-item-caption">沖田教授が，研究室としての今年度上半期の総括と学部ゼミ3年生への歓迎の言葉を述べられました．</p>
+            </div>
+            <div class="photo-item">
+              <img width="225" height="299" src="images/gallery/snap/2019_zemiryokou/2019_zemiryokou_31.jpg" alt="R1 ゼミ旅行（R1.10.12） 写真3" loading="lazy">
+              <p class="photo-item-caption">研究室メンバーとゼミ生に下半期の研究活動への激励の意を込めてご挨拶される坂本准教授．</p>
+            </div>
+            <div class="photo-item">
+              <img width="280" height="210" src="images/gallery/snap/2019_zemiryokou/2019_zemiryokou_41.jpg" alt="レクレーションとしてボーリング大会が開催され，大いに盛り上がりました．" loading="lazy">
+              <p class="photo-item-caption">レクレーションとしてボーリング大会が開催され，大いに盛り上がりました．</p>
+            </div>
+            <div class="photo-item">
+              <img width="280" height="210" src="images/gallery/snap/2019_zemiryokou/2019_zemiryokou_51.jpg" alt="R1 ゼミ旅行（R1.10.12） 写真5" loading="lazy">
+              <p class="photo-item-caption">沖田教授からボーリング大会で優勝した友岡君，近藤君（左から）に優勝賞品をお渡しいただきました．</p>
+            </div>
+            <div class="photo-item">
+              <img width="225" height="299" src="images/gallery/snap/2019_zemiryokou/2019_zemiryokou_61.jpg" alt="R1 ゼミ旅行（R1.10.12） 写真6" loading="lazy">
+              <p class="photo-item-caption">同じく2位に入賞した大賀君，神宮さん（左から）は坂本准教授から賞品をいただきました．</p>
+            </div>
+            <div class="photo-item">
+              <img width="225" height="299" src="images/gallery/snap/2019_zemiryokou/2019_zemiryokou_71.jpg" alt="同じく3位に入賞した宮原君，平島君（左から）は片岡先生から賞品をいただきました." loading="lazy">
+              <p class="photo-item-caption">同じく3位に入賞した宮原君，平島君（左から）は片岡先生から賞品をいただきました.</p>
+            </div>
+            <div class="photo-item">
+              <img width="280" height="210" src="images/gallery/snap/2019_zemiryokou/2019_zemiryokou_81.jpg" alt="R1 ゼミ旅行（R1.10.12） 写真8" loading="lazy">
+              <p class="photo-item-caption">同じくブービー賞となった町田君，吉田さん（左から）には近藤君，本田君，後藤君から賞品が贈られました．</p>
+            </div>
+            <div class="photo-item">
+              <img width="280" height="210" src="images/gallery/snap/2019_zemiryokou/2019_zemiryokou_91.jpg" alt="R1 ゼミ旅行（R1.10.12） 写真9" loading="lazy">
+              <p class="photo-item-caption photo-item-caption--long">新たにゼミ生となった学部3年生7名（上段左から管君，江崎さん，神宮さん，平島君，下段左から土橋さん，古庄さん，真栄城さん）.</p>
+            </div>
+          </div>
+        </div>
       </div>
 
+    </div>
+  </section>
+    </div>
+  </div>
+
+
+  <section class="contact-section" id="contact">
+    <div class="container contact-inner">
+      <div class="contact-text">
+        <h2 class="contact-title">Contact</h2>
+        <p class="contact-desc">
+          研究室への進学・共同研究・<br>取材のご相談はお気軽にご連絡ください。
+        </p>
+        <a href="mailto:locomotive.reha@gmail.com" class="btn-contact">お問い合わせ →</a>
+      </div>
+      <div class="contact-info">
+        <dl class="info-list">
+          <div class="info-row">
+            <dt>住所</dt>
+            <dd>〒852-8520 長崎県長崎市坂本1-7-1<br>長崎大学大学院医歯薬学総合研究科<br>運動障害リハビリテーション学研究室</dd>
+          </div>
+          <div class="info-row">
+            <dt>TEL</dt>
+            <dd>095-819-7967</dd>
+          </div>
+          <div class="info-row">
+            <dt>Email</dt>
+            <dd><a href="mailto:locomotive.reha@gmail.com">locomotive.reha@gmail.com</a></dd>
+          </div>
+        </dl>
+      </div>
     </div>
   </section>
 
@@ -326,8 +922,8 @@
         Nagasaki University Graduate School of Biomedical Sciences
       </p>
       <div class="footer-sns">
-        <a href="https://x.com/nu_locomo_lab" target="_blank" rel="noopener" aria-label="X（旧Twitter）">X</a>
-        <a href="https://www.facebook.com/people/%E9%95%B7%E5%B4%8E%E5%A4%A7%E5%AD%A6%E9%81%8B%E5%8B%95%E9%9A%9C%E5%AE%B3%E3%83%AA%E3%83%8F%E3%83%93%E3%83%AA%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E5%AD%A6%E7%A0%94%E7%A9%B6%E5%AE%A4/100065706000926/" target="_blank" rel="noopener" aria-label="Facebook">Facebook</a>
+        <a href="https://x.com/nu_locomo_lab" target="_blank" rel="noopener" aria-label="X（旧Twitter）"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>X</a>
+        <a href="https://www.facebook.com/people/%E9%95%B7%E5%B4%8E%E5%A4%A7%E5%AD%A6%E9%81%8B%E5%8B%95%E9%9A%9C%E5%AE%B3%E3%83%AA%E3%83%8F%E3%83%93%E3%83%AA%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E5%AD%A6%E7%A0%94%E7%A9%B6%E5%AE%A4/100065706000926/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>Facebook</a>
       </div>
     </div>
   </footer>

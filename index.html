@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>長崎大学 運動障害リハビリテーション学研究室</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,8 +15,8 @@
   <header class="header">
     <div class="container header-inner">
       <a href="index.html" class="logo">
-        <span class="logo-ja">運動障害リハビリテーション学研究室</span>
-        <span class="logo-en">Laboratory of Locomotive Rehabilitation Science — Nagasaki University</span>
+        <span class="logo-ja">長崎大学大学院医歯薬学総合研究科 運動障害リハビリテーション学研究室</span>
+        <span class="logo-en">Nagasaki University Graduate School of Biomedical Sciences Laboratory of Locomotive Rehabilitation Science</span>
       </a>
       <nav class="nav">
         <ul class="nav-list">
@@ -24,7 +27,7 @@
           <li><a href="pressrelease.html">プレスリリース</a></li>
           <li><a href="photo.html">フォトギャラリー</a></li>
           <li><a href="book.html">書籍紹介</a></li>
-          <li><a href="access.html">アクセス</a></li>
+          <li><a href="link.html">リンク</a></li>
         </ul>
       </nav>
       <!-- ハンバーガーメニュー（スマホ用） -->
@@ -49,8 +52,30 @@
           リハビリテーションのエビデンスを構築します。
         </p>
       </div>
-      <div class="hero-image">
-        <img src="images/top.png.png" alt="研究室の様子">
+      <div class="hero-image hero-carousel" role="region" aria-label="研究室の様子（スライドショー）">
+        <div class="hero-carousel-track">
+          <div class="hero-slide is-active">
+            <img src="images/seminar/slide1.jpg" alt="研究室の様子（スライド1）">
+          </div>
+          <div class="hero-slide">
+            <img src="images/seminar/slide2.jpg" alt="研究室の様子（スライド2）">
+          </div>
+          <div class="hero-slide">
+            <img src="images/seminar/slide3.jpg" alt="研究室の様子（スライド3）">
+          </div>
+          <div class="hero-slide">
+            <img src="images/seminar/slide4.jpg" alt="研究室の様子（スライド4）">
+          </div>
+          <div class="hero-slide">
+            <img src="images/seminar/slide5.jpg" alt="研究室の様子（スライド5）">
+          </div>
+          <div class="hero-slide">
+            <img src="images/seminar/slide6.jpg" alt="研究室の様子（スライド6）">
+          </div>
+        </div>
+        <button class="hero-carousel-btn hero-carousel-prev" type="button" aria-label="前のスライド">&#10094;</button>
+        <button class="hero-carousel-btn hero-carousel-next" type="button" aria-label="次のスライド">&#10095;</button>
+        <div class="hero-carousel-dots" role="tablist" aria-label="スライド選択"></div>
       </div>
     </div>
   </section>
@@ -66,38 +91,52 @@
       <ul class="news-list">
         <!-- ★ 新着情報はここに追加していく ★ -->
         <li class="news-item">
+          <span class="news-date">2026.05.12</span>
+          <span class="news-tag tag-paper">論文</span>
+          <p class="news-text">
+            坂本有希倫先生の論文「<a href="https://pubmed.ncbi.nlm.nih.gov/42121247/" target="_blank" rel="noopener">Impact upper-limb aerobic exercise on the prevention of chronic postsurgical pain after total knee arthroplasty: a randomized controlled trial</a>」が BMC Res Notes (IF: 1.7) からpublishされました。<a href="pressrelease/sakamotoyukinori20260512.html">プレスリリース</a>も掲載しています。
+          </p>
+        </li>
+        <li class="news-item">
+          <span class="news-date">2026.05.09</span>
+          <span class="news-tag tag-news">お知らせ</span>
+          <p class="news-text">
+            坂本教授の<a href="photo.html#snap-1">教授就任記念祝賀会</a>が開催されました。
+          </p>
+        </li>
+        <li class="news-item">
           <span class="news-date">2025.12.06</span>
           <span class="news-tag tag-award">受賞</span>
           <p class="news-text">
-            西先生の演題「しびれ同調経皮的電気刺激の即時効果を規定する臨床指標：末梢・中枢神経障害を対象とした疾患横断的決定木分析」がJapan Pain Week 2025で奨励賞に選ばれました。
+            西先生の演題「<a href="awards.html#awards">しびれ同調経皮的電気刺激の即時効果を規定する臨床指標：末梢・中枢神経障害を対象とした疾患横断的決定木分析</a>」がJapan Pain Week 2025で奨励賞に選ばれました。
           </p>
         </li>
         <li class="news-item">
           <span class="news-date">2025.11.15</span>
           <span class="news-tag tag-award">受賞</span>
           <p class="news-text">
-            高橋の演題「重症疾患筋障害ならびに重症疾患神経筋障害に由来した筋線維萎縮に対するB-SESの効果」が第11回日本骨格筋電気刺激研究会学術集会で優秀演題賞に選ばれました。
+            高橋先生の演題「<a href="awards.html#awards">重症疾患筋障害ならびに重症疾患神経筋障害に由来した筋線維萎縮に対するB-SESの効果</a>」が第11回日本骨格筋電気刺激研究会学術集会で優秀演題賞に選ばれました。
           </p>
         </li>
         <li class="news-item">
           <span class="news-date">2025.09.29</span>
           <span class="news-tag tag-paper">論文</span>
           <p class="news-text">
-            本川さんの論文「Low-intensity muscle contraction exercise reduces pain sensitivity by modulating peripheral pathology and spinal sensitization in end-stage knee osteoarthritis rats.」が Front. Pain Res (IF: 2.7) からpublishされました。
+            本川先生の論文「<a href="https://pubmed.ncbi.nlm.nih.gov/41090182/" target="_blank" rel="noopener">Low-intensity muscle contraction exercise reduces pain sensitivity by modulating peripheral pathology and spinal sensitization in end-stage knee osteoarthritis rats.</a>」が Front. Pain Res (IF: 2.7) からpublishされました。<a href="pressrelease/motokawa202510.html">プレスリリース</a>も掲載しています。
           </p>
         </li>
         <li class="news-item">
           <span class="news-date">2025.07.01</span>
           <span class="news-tag tag-paper">論文</span>
           <p class="news-text">
-            本田先生の論文「Frequent tetanic exercise through electrical muscle stimulation may reduce immobilization-induced muscle fibrosis by suppressing myonuclear apoptosis」が Muscle & Nerve (IF: 2.8) からpublishされました。
+            本田先生の論文「<a href="https://pubmed.ncbi.nlm.nih.gov/40013385/" target="_blank" rel="noopener">Frequent tetanic exercise through electrical muscle stimulation may reduce immobilization-induced muscle fibrosis by suppressing myonuclear apoptosis</a>」が Muscle &amp; Nerve (IF: 2.8) からpublishされました。<a href="pressrelease/honda20250320.html">プレスリリース</a>も掲載しています。
           </p>
         </li>
         <li class="news-item">
           <span class="news-date">2025.07.01</span>
           <span class="news-tag tag-paper">論文</span>
           <p class="news-text">
-            梶原先生の論文「Effect of hypoxia-inducible factor 1 alpha inhibitor on immobilization-induced muscle fibrosis related to muscle contracture」がJournal of Physical Therapy Scienceにpublishされました。
+            梶原先生の論文「<a href="https://pubmed.ncbi.nlm.nih.gov/40599839/" target="_blank" rel="noopener">Effect of hypoxia-inducible factor 1 alpha inhibitor on immobilization-induced muscle fibrosis related to muscle contracture</a>」がJournal of Physical Therapy Scienceにpublishされました。
           </p>
         </li>
       </ul>
@@ -188,7 +227,7 @@
             <dd>〒852-8520 長崎県長崎市坂本1-7-1<br>長崎大学大学院医歯薬学総合研究科<br>運動障害リハビリテーション学研究室</dd>
           </div>
           <div class="info-row">
-            <dt>TEL/FAX</dt>
+            <dt>TEL</dt>
             <dd>095-819-7967</dd>
           </div>
           <div class="info-row">
@@ -208,8 +247,8 @@
         Nagasaki University Graduate School of Biomedical Sciences
       </p>
       <div class="footer-sns">
-        <a href="https://x.com/nu_locomo_lab" target="_blank" rel="noopener" aria-label="X（旧Twitter）">X</a>
-        <a href="https://www.facebook.com/people/%E9%95%B7%E5%B4%8E%E5%A4%A7%E5%AD%A6%E9%81%8B%E5%8B%95%E9%9A%9C%E5%AE%B3%E3%83%AA%E3%83%8F%E3%83%93%E3%83%AA%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E5%AD%A6%E7%A0%94%E7%A9%B6%E5%AE%A4/100065706000926/" target="_blank" rel="noopener" aria-label="Facebook">Facebook</a>
+        <a href="https://x.com/nu_locomo_lab" target="_blank" rel="noopener" aria-label="X（旧Twitter）"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>X</a>
+        <a href="https://www.facebook.com/people/%E9%95%B7%E5%B4%8E%E5%A4%A7%E5%AD%A6%E9%81%8B%E5%8B%95%E9%9A%9C%E5%AE%B3%E3%83%AA%E3%83%8F%E3%83%93%E3%83%AA%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E5%AD%A6%E7%A0%94%E7%A9%B6%E5%AE%A4/100065706000926/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>Facebook</a>
       </div>
     </div>
   </footer>

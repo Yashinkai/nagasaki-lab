@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>沖田 実 — 長崎大学 運動障害リハビリテーション学研究室</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap">
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -11,8 +14,8 @@
   <header class="header">
     <div class="container header-inner">
       <a href="../index.html" class="logo">
-        <span class="logo-ja">運動障害リハビリテーション学研究室</span>
-        <span class="logo-en">Laboratory of Locomotive Rehabilitation Science — Nagasaki University</span>
+        <span class="logo-ja">長崎大学大学院医歯薬学総合研究科 運動障害リハビリテーション学研究室</span>
+        <span class="logo-en">Nagasaki University Graduate School of Biomedical Sciences Laboratory of Locomotive Rehabilitation Science</span>
       </a>
       <nav class="nav">
         <ul class="nav-list">
@@ -23,7 +26,6 @@
           <li><a href="../pressrelease.html">プレスリリース</a></li>
           <li><a href="../photo.html">フォトギャラリー</a></li>
           <li><a href="../book.html">書籍紹介</a></li>
-          <li><a href="../access.html">アクセス</a></li>
         </ul>
       </nav>
       <button class="hamburger" id="hamburger" aria-label="メニューを開く">
@@ -33,11 +35,11 @@
   </header>
 
   <section class="profile-hero">
-    <div class="container">
+    <div class="container" style="position:relative;">
       <a href="../member.html" class="back-link">← メンバー一覧</a>
       <div class="profile-hero-inner">
         <div class="profile-photo-thumb profile-photo-thumb--empty">
-          <img src="../images/members/okita.jpg" alt="沖田 実" onerror="this.parentElement.classList.remove('profile-photo-thumb--empty'); this.remove();">
+          <img src="../images/members/okita.jpg" alt="沖田 実" onload="this.parentElement.classList.remove('profile-photo-thumb--empty');" onerror="this.remove();">
         </div>
         <div>
           <p class="profile-name-en">Minoru Okita</p>
@@ -45,24 +47,33 @@
           <p class="profile-role">教授 / 理学療法士 / 博士（医学）</p>
         </div>
       </div>
+      <div class="hero-carousel" role="region" aria-label="沖田 実（スライドショー）" data-slides-dir="../images/members/okita/" data-slides-max="30" style="position:absolute;top:0;right:0;bottom:0;width:320px;max-width:40%;display:none;">
+        <div class="hero-carousel-track" style="aspect-ratio:auto;height:100%;"></div>
+        <button class="hero-carousel-btn hero-carousel-prev" type="button" aria-label="前のスライド">&#10094;</button>
+        <button class="hero-carousel-btn hero-carousel-next" type="button" aria-label="次のスライド">&#10095;</button>
+        <div class="hero-carousel-dots" role="tablist" aria-label="スライド選択"></div>
+      </div>
     </div>
   </section>
 
   <div class="container">
 
     <section class="profile-section">
-      <h2 class="profile-section-title">研究</h2>
-      <p style="font-size:14px;color:var(--color-dark);line-height:1.85;">
-        関節拘縮の発生メカニズムの解明とリハビリテーションの効果に関する研究を総括。関節周囲組織の網羅的解析から拘縮の分子・組織レベルのメカニズムを明らかにし、リハビリテーション介入の科学的根拠の構築を目指している。
+      <h2 class="profile-section-title">主な研究分野と役割</h2>
+      <p style="font-size:14px;color:var(--color-dark);line-height:1.85;text-wrap:pretty;">
+        個人としては，関節拘縮の発生メカニズムの解明とリハビリテーションの効果に関する研究を核としていますが，当研究室の研究内容のすべてを総括しています．
       </p>
     </section>
 
     <section class="profile-section">
+      <a href="https://researchers.ir.nagasaki-u.ac.jp/researchdetail.php?id=dTg3YjI2TGpSdXpoNXJuU2RqemQwK3ltMllKSnoyUHAzRzQ1a2c9PQ==" target="_blank" rel="noopener" style="display:inline-block;margin-bottom:1.5rem;">
+        <img src="../images/members/長崎大学　研究者総覧データベースシステム.png" alt="長崎大学 研究者総覧データベースシステム（沖田 実）" style="max-width:280px;width:100%;height:auto;display:block;">
+      </a>
       <h2 class="profile-section-title">学歴</h2>
       <div class="timeline">
         <div class="timeline-item">
           <span class="timeline-year">1989年3月</span>
-          <span class="timeline-desc">長崎大学医療技術短期大学部 理学療法学科 卒業</span>
+          <span class="timeline-desc">長崎大学医療技術短期大学部理学療法学科 卒業</span>
         </div>
         <div class="timeline-item">
           <span class="timeline-year">1989年5月</span>
@@ -70,15 +81,19 @@
         </div>
         <div class="timeline-item">
           <span class="timeline-year">1995年3月</span>
-          <span class="timeline-desc">佛教大学 社会学部 社会福祉学科 卒業</span>
+          <span class="timeline-desc">佛教大学社会学部社会福祉学科 卒業</span>
         </div>
         <div class="timeline-item">
           <span class="timeline-year">1997年3月</span>
-          <span class="timeline-desc">長崎大学大学院 経済学研究科 修士課程 修了（修士）</span>
+          <span class="timeline-desc">長崎大学大学院経済学研究科修士課程 修了 修士（経済学）修（経）（長崎大学）</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">1997年4月〜<br>2004年3月</span>
+          <span class="timeline-desc">長崎大学大学院医学系研究科（内科学第一教室）研究歴認定</span>
         </div>
         <div class="timeline-item">
           <span class="timeline-year">2004年1月</span>
-          <span class="timeline-desc">博士（医学）取得</span>
+          <span class="timeline-desc">博士（医学）（長崎大学（乙）第1706号）</span>
         </div>
       </div>
     </section>
@@ -95,48 +110,145 @@
           <span class="timeline-desc">長崎大学医療技術短期大学部 助手</span>
         </div>
         <div class="timeline-item">
+          <span class="timeline-year">1999年10月〜<br>2001年8月</span>
+          <span class="timeline-desc">長崎大学医学部附属病院理学療法部 兼務</span>
+        </div>
+        <div class="timeline-item">
           <span class="timeline-year">2001年10月〜<br>2004年3月</span>
           <span class="timeline-desc">長崎大学医学部 助手</span>
         </div>
         <div class="timeline-item">
           <span class="timeline-year">2004年4月〜<br>2007年3月</span>
-          <span class="timeline-desc">星城大学リハビリテーション学部 助教授</span>
+          <span class="timeline-desc">学校法人名古屋石田学園 星城大学リハビリテーション学部 助教授</span>
         </div>
         <div class="timeline-item">
           <span class="timeline-year">2007年4月〜<br>2007年9月</span>
-          <span class="timeline-desc">西九州大学リハビリテーション学部 准教授</span>
+          <span class="timeline-desc">学校法人永原学園 西九州大学リハビリテーション学部 准教授</span>
         </div>
         <div class="timeline-item">
           <span class="timeline-year">2007年10月〜<br>現在</span>
-          <span class="timeline-desc">長崎大学大学院医歯薬学総合研究科保健学専攻 教授</span>
+          <span class="timeline-desc">長崎大学 教授（大学院医歯薬学総合研究科保健学専攻理学・作業療法学講座）</span>
         </div>
       </div>
     </section>
 
     <section class="profile-section">
-      <h2 class="profile-section-title">学会活動</h2>
-      <div class="profile-tag-list">
-        <span class="profile-tag">日本理学療法士協会会員（1989年〜）</span>
-        <span class="profile-tag">日本結合組織学会会員（2000年〜）</span>
-        <span class="profile-tag">日本運動生理学会会員（2000年〜）</span>
-        <span class="profile-tag">理学療法の医学的基礎研究会 会長（2005年〜）</span>
-        <span class="profile-tag">日本疼痛学会会員（2008年〜）</span>
-        <span class="profile-tag">日本運動器疼痛研究会 会員・評議員（2008年〜）</span>
-      </div>
-    </section>
-
-    <section class="profile-section">
-      <h2 class="profile-section-title">研究費</h2>
+      <h2 class="profile-section-title">学会・社会活動</h2>
       <div class="timeline">
         <div class="timeline-item">
-          <span class="timeline-year">2009〜2011年度</span>
-          <span class="timeline-desc">科学研究費補助金 基盤研究（B）「関節周囲組織の網羅解析から拘縮の発生メカニズムとリハビリテーションの効果を探る」（代表）</span>
+          <span class="timeline-year">1989年4月〜<br>現在</span>
+          <span class="timeline-desc">日本理学療法士協会 会員</span>
         </div>
         <div class="timeline-item">
-          <span class="timeline-year">複数年度</span>
-          <span class="timeline-desc">科学研究費補助金 基盤研究（C）（複数件）</span>
+          <span class="timeline-year">1997年4月〜<br>2000年3月</span>
+          <span class="timeline-desc">理学療法の医学的基礎研究会 理事</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">1998年4月〜<br>2000年3月</span>
+          <span class="timeline-desc">社団法人長崎県理学療法士会 学術部長</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2000年4月〜<br>2005年4月</span>
+          <span class="timeline-desc">理学療法の医学的基礎研究会 副会長</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2000年4月〜<br>2004年3月</span>
+          <span class="timeline-desc">社団法人長崎県理学療法士会 会誌編集部長</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2000年4月〜<br>現在</span>
+          <span class="timeline-desc">日本結合組織学会 会員</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2000年4月〜<br>現在</span>
+          <span class="timeline-desc">日本運動生理学会 会員</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2002年10月〜<br>現在</span>
+          <span class="timeline-desc">日本物理療法学会 会員</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2003年7月〜<br>現在</span>
+          <span class="timeline-desc">社団法人日本理学療法士協会 理学療法基礎系専門部会員</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2004年9月〜<br>2008年3月</span>
+          <span class="timeline-desc">社団法人日本理学療法士協会 学術誌部員</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2005年5月〜<br>現在</span>
+          <span class="timeline-desc">理学療法の医学的基礎研究会 会長</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2006年4月〜<br>現在</span>
+          <span class="timeline-desc">日本体力医学会 会員</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2008年7月〜<br>現在</span>
+          <span class="timeline-desc">日本疼痛学会 会員</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2008年12月〜<br>現在</span>
+          <span class="timeline-desc">日本運動器疼痛研究会 会員・評議員</span>
         </div>
       </div>
+    </section>
+
+    <section class="profile-section">
+      <h2 class="profile-section-title">競争的資金</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <span class="timeline-year">2000〜<br>2002年度</span>
+          <span class="timeline-desc">科学研究費補助金 基盤研究（C）「拘縮の病態およびその治療法の解明に関する実験的研究」（代表）</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2000〜<br>2002年度</span>
+          <span class="timeline-desc">科学研究費補助金 基盤研究（C）「持続的他動運動法が萎縮筋メカノレセプターの機能および形態に及ぼす影響に関する研究」（分担）</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2002年度</span>
+          <span class="timeline-desc">（社）日本理学療法士協会助成研究「廃用性筋萎縮の予防としての温熱刺激の影響に関する研究」（代表）</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2003年度</span>
+          <span class="timeline-desc">（社）日本理学療法士協会助成研究「アジュバンド関節炎ラットの後肢に対する高温，低温刺激の影響」（分担）</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2003〜<br>2005年度</span>
+          <span class="timeline-desc">科学研究費補助金 基盤研究（C）「抗アセチルコリンレセプター抗体陰性，抗MuSK抗体陽性重症筋無力症患者の病態」（分担）</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2004〜<br>2005年度</span>
+          <span class="timeline-desc">科学研究費補助金 若手研究（B）「熱刺激による新たな筋萎縮予防方法の開発に関する実験的研究」（代表）</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2004〜<br>2006年度</span>
+          <span class="timeline-desc">科学研究費補助金 基盤研究（C）「廃用性筋萎縮における免疫生化学的変化の解析およびリハビリテーションの影響」（分担）</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2004年度</span>
+          <span class="timeline-desc">（社）日本理学療法士協会奨励基礎研究「筋萎縮，ならびに拘縮に対する超音波療法の効果に関する実験的研究」（分担）</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2006〜<br>2008年度</span>
+          <span class="timeline-desc">科学研究費補助金 基盤研究（C）「拘縮の発生メカニズムと運動・物理療法の効果に関する実験的アプローチ」（代表）</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2008〜<br>2010年度</span>
+          <span class="timeline-desc">科学研究費補助金 基盤研究（C）「関節拘縮による関節軟骨変性メカニズムの解明およびリハビリテーションの効果」（分担）</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2008〜<br>2010年度</span>
+          <span class="timeline-desc">長崎大学医学部保健学科長裁量研究プロジェクト「不活動が原因で発生する慢性痛の病態解明に関する調査・実験的研究」（代表）</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2009〜<br>2011年度</span>
+          <span class="timeline-desc">科学研究費補助金 基盤研究（B）「関節周囲組織の網羅解析から拘縮の発生メカニズムとリハビリテーションの効果を探る」（代表）</span>
+        </div>
+      </div>
+      <a href="https://nrid.nii.ac.jp/ja/nrid/1000050244091/" target="_blank" rel="noopener" style="display:inline-block;margin-top:1rem;">
+        <img src="../images/members/科研費.jpg" alt="KAKEN 研究者情報（沖田 実）" style="max-width:150px;width:100%;height:auto;display:block;">
+      </a>
     </section>
 
     <section class="profile-section">
@@ -149,7 +261,61 @@
       </div>
     </section>
 
+    <section class="profile-section">
+      <h2 class="profile-section-title">主な発表論文</h2>
+      <div class="award-list">
+        <div class="award-item">
+          <span class="award-year">2013年</span>
+          <span class="award-desc">沖田 実，中野治郎，関野有紀，濱上陽平: ペイン・リハビリテーション：不活動と痛み. Practice of Pain Management 4(2): 18-22, 2013.</span>
+        </div>
+        <div class="award-item">
+          <span class="award-year">2012年</span>
+          <span class="award-desc">沖田 実: 関節可動域制限の発生メカニズムとその対処. 理学療法学 39(4)：226-229，2012.</span>
+        </div>
+        <div class="award-item">
+          <span class="award-year">2011年</span>
+          <span class="award-desc">沖田 実，坂本淳哉，中野治郎，近藤康隆，横山真吾，本田祐一郎: 骨格筋の変化からみた拘縮の病態と物理的刺激の影響. 日本整形外科学会雑誌 85：420-425, 2011.</span>
+        </div>
+        <div class="award-item">
+          <span class="award-year">2009年</span>
+          <span class="award-desc">Okita M, Nakano J, Kataoka H, Sakamoto J, Origuchi T, Yoshimura T: Effects of therapeutic ultrasound on joint mobility and collagen fibril arrangement in the endomysium of immobilized rat soleus muscle. Ultrasound Med Biol 35: 237-244, 2009.</span>
+        </div>
+        <div class="award-item">
+          <span class="award-year">2004年</span>
+          <span class="award-desc">Okita M, Yoshimura T, Nakano J, Motomura M, Eguchi K: Effects of reduced joint mobility on sarcomere length, collagen fibril arrangement in the endomysium, and hyaluronan in the rat soleus muscle. J Muscle Res Cell Motility 25: 159-166, 2004.</span>
+        </div>
+      </div>
+    </section>
+
   </div>
+
+  <section class="contact-section" id="contact">
+    <div class="container contact-inner">
+      <div class="contact-text">
+        <h2 class="contact-title">Contact</h2>
+        <p class="contact-desc">
+          研究室への進学・共同研究・<br>取材のご相談はお気軽にご連絡ください。
+        </p>
+        <a href="mailto:locomotive.reha@gmail.com" class="btn-contact">お問い合わせ →</a>
+      </div>
+      <div class="contact-info">
+        <dl class="info-list">
+          <div class="info-row">
+            <dt>住所</dt>
+            <dd>〒852-8520 長崎県長崎市坂本1-7-1<br>長崎大学大学院医歯薬学総合研究科<br>運動障害リハビリテーション学研究室</dd>
+          </div>
+          <div class="info-row">
+            <dt>TEL</dt>
+            <dd>095-819-7967</dd>
+          </div>
+          <div class="info-row">
+            <dt>Email</dt>
+            <dd><a href="mailto:locomotive.reha@gmail.com">locomotive.reha@gmail.com</a></dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
 
   <footer class="footer">
     <div class="container footer-inner">
@@ -158,12 +324,13 @@
         Nagasaki University Graduate School of Biomedical Sciences
       </p>
       <div class="footer-sns">
-        <a href="https://x.com/nu_locomo_lab" target="_blank" rel="noopener" aria-label="X（旧Twitter）">X</a>
-        <a href="https://www.facebook.com/people/%E9%95%B7%E5%B4%8E%E5%A4%A7%E5%AD%A6%E9%81%8B%E5%8B%95%E9%9A%9C%E5%AE%B3%E3%83%AA%E3%83%8F%E3%83%93%E3%83%AA%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E5%AD%A6%E7%A0%94%E7%A9%B6%E5%AE%A4/100065706000926/" target="_blank" rel="noopener" aria-label="Facebook">Facebook</a>
+        <a href="https://x.com/nu_locomo_lab" target="_blank" rel="noopener" aria-label="X（旧Twitter）"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>X</a>
+        <a href="https://www.facebook.com/people/%E9%95%B7%E5%B4%8E%E5%A4%A7%E5%AD%A6%E9%81%8B%E5%8B%95%E9%9A%9C%E5%AE%B3%E3%83%AA%E3%83%8F%E3%83%93%E3%83%AA%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E5%AD%A6%E7%A0%94%E7%A9%B6%E5%AE%A4/100065706000926/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>Facebook</a>
       </div>
     </div>
   </footer>
 
   <script src="../main.js"></script>
+  <script src="hero-slideshow.js"></script>
 </body>
 </html>

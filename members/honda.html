@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>本田 祐一郎 — 長崎大学 運動障害リハビリテーション学研究室</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap">
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -11,8 +14,8 @@
   <header class="header">
     <div class="container header-inner">
       <a href="../index.html" class="logo">
-        <span class="logo-ja">運動障害リハビリテーション学研究室</span>
-        <span class="logo-en">Laboratory of Locomotive Rehabilitation Science — Nagasaki University</span>
+        <span class="logo-ja">長崎大学大学院医歯薬学総合研究科 運動障害リハビリテーション学研究室</span>
+        <span class="logo-en">Nagasaki University Graduate School of Biomedical Sciences Laboratory of Locomotive Rehabilitation Science</span>
       </a>
       <nav class="nav">
         <ul class="nav-list">
@@ -23,7 +26,6 @@
           <li><a href="../pressrelease.html">プレスリリース</a></li>
           <li><a href="../photo.html">フォトギャラリー</a></li>
           <li><a href="../book.html">書籍紹介</a></li>
-          <li><a href="../access.html">アクセス</a></li>
         </ul>
       </nav>
       <button class="hamburger" id="hamburger" aria-label="メニューを開く">
@@ -33,11 +35,11 @@
   </header>
 
   <section class="profile-hero">
-    <div class="container">
+    <div class="container" style="position:relative;">
       <a href="../member.html" class="back-link">← メンバー一覧</a>
       <div class="profile-hero-inner">
         <div class="profile-photo-thumb profile-photo-thumb--empty">
-          <img src="../images/members/honda.jpg" alt="本田 祐一郎" onerror="this.parentElement.classList.remove('profile-photo-thumb--empty'); this.remove();">
+          <img src="../images/members/honda.jpg" alt="本田 祐一郎" onload="this.parentElement.classList.remove('profile-photo-thumb--empty');" onerror="this.remove();">
         </div>
         <div>
           <p class="profile-name-en">Yuichiro Honda</p>
@@ -45,32 +47,41 @@
           <p class="profile-role">助教 / 理学療法士 / 博士（医学）</p>
         </div>
       </div>
+      <div class="hero-carousel" role="region" aria-label="本田 祐一郎（スライドショー）" data-slides-dir="../images/members/honda/" data-slides-max="30" style="position:absolute;top:0;right:0;bottom:0;width:320px;max-width:40%;display:none;">
+        <div class="hero-carousel-track" style="aspect-ratio:auto;height:100%;"></div>
+        <button class="hero-carousel-btn hero-carousel-prev" type="button" aria-label="前のスライド">&#10094;</button>
+        <button class="hero-carousel-btn hero-carousel-next" type="button" aria-label="次のスライド">&#10095;</button>
+        <div class="hero-carousel-dots" role="tablist" aria-label="スライド選択"></div>
+      </div>
     </div>
   </section>
 
   <div class="container">
 
     <section class="profile-section">
-      <h2 class="profile-section-title">研究</h2>
-      <p style="font-size:14px;color:var(--color-dark);line-height:1.85;">
-        筋性拘縮の発生機序に関わる分子メカニズムの探索と理学療法学の効果検証を主な研究テーマとする。分子生物学的解析を中核とし、客員研究員・研究協力員・大学院生の実験サポートも担っている。
+      <h2 class="profile-section-title">主な研究分野と役割</h2>
+      <p style="font-size:14px;color:var(--color-dark);line-height:1.85;text-wrap:pretty;">
+        筋性拘縮の発生機序に関わる分子メカニズムの探索と理学療法学の効果検証に関する研究を主な研究分野としています．本研究室では分子生物学的解析の中核を担い，客員研究員や研究協力員，大学院生の実験をサポートしています．
       </p>
     </section>
 
     <section class="profile-section">
+      <a href="https://researchers.ir.nagasaki-u.ac.jp/researchdetail.php?id=dTg3YjI2TGpSdXpoNXJuU2xFOVJsc0tuUXhFcDlHbVV0T1A4RVE9PQ==" target="_blank" rel="noopener" style="display:inline-block;margin-bottom:1.5rem;">
+        <img src="../images/members/長崎大学　研究者総覧データベースシステム.png" alt="長崎大学 研究者総覧データベースシステム（本田 祐一郎）" style="max-width:280px;width:100%;height:auto;display:block;">
+      </a>
       <h2 class="profile-section-title">学歴</h2>
       <div class="timeline">
         <div class="timeline-item">
           <span class="timeline-year">2009年3月</span>
-          <span class="timeline-desc">長崎大学 医学部 保健学科 理学療法学専攻 卒業</span>
+          <span class="timeline-desc">長崎大学医学部保健学科 理学療法学専攻 卒業</span>
         </div>
         <div class="timeline-item">
           <span class="timeline-year">2011年3月</span>
-          <span class="timeline-desc">修士（理学療法学）取得</span>
+          <span class="timeline-desc">長崎大学大学院医歯薬学総合研究科保健学専攻 理学療法学分野 修了　修士（理学療法学）（長崎大学（医歯薬）第568号）</span>
         </div>
         <div class="timeline-item">
           <span class="timeline-year">2015年3月</span>
-          <span class="timeline-desc">博士（医学）取得（運動障害リハビリテーション学分野）</span>
+          <span class="timeline-desc">長崎大学大学院医歯薬学総合研究科医療科学専攻 運動障害リハビリテーション学分野 修了　博士（医学）（長崎大学（医歯薬）（甲）第774号）</span>
         </div>
       </div>
     </section>
@@ -90,49 +101,145 @@
     </section>
 
     <section class="profile-section">
-      <h2 class="profile-section-title">学会活動</h2>
-      <div class="profile-tag-list">
-        <span class="profile-tag">日本理学療法士協会</span>
-        <span class="profile-tag">日本基礎理学療法学会</span>
-        <span class="profile-tag">日本結合組織学会</span>
-        <span class="profile-tag">日本ペインリハビリテーション学会</span>
-        <span class="profile-tag">日本骨格筋電気刺激研究会</span>
+      <h2 class="profile-section-title">学会・社会活動</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <span class="timeline-year">2009年4月〜<br>現在</span>
+          <span class="timeline-desc">日本理学療法士協会 会員</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2009年4月〜<br>現在</span>
+          <span class="timeline-desc">日本基礎理学療法学会（旧 理学療法の医学的基礎研究会）会員</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2010年2月〜<br>現在</span>
+          <span class="timeline-desc">日本結合組織学会 会員</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2012年8月〜<br>現在</span>
+          <span class="timeline-desc">日本ペインリハビリテーション学会 会員</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2017年6月〜<br>現在</span>
+          <span class="timeline-desc">日本基礎理学療法学会 若手研究推進委員</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2018年8月〜<br>現在</span>
+          <span class="timeline-desc">日本骨格筋電気刺激研究会 会員</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2019年7月〜<br>現在</span>
+          <span class="timeline-desc">日本物理療法学会 会員</span>
+        </div>
       </div>
     </section>
 
     <section class="profile-section">
-      <h2 class="profile-section-title">研究費</h2>
+      <h2 class="profile-section-title">競争的資金</h2>
       <div class="timeline">
         <div class="timeline-item">
-          <span class="timeline-year">複数年度</span>
-          <span class="timeline-desc">科学研究費補助金 研究活動スタート支援（代表）</span>
+          <span class="timeline-year">2014〜<br>2015年度</span>
+          <span class="timeline-desc">科学研究費補助事業 研究活動スタート支援「筋性拘縮の発生メカニズムの解明と新たなリハビリテーションの治療戦略の開発」（代表）</span>
         </div>
         <div class="timeline-item">
-          <span class="timeline-year">複数年度</span>
-          <span class="timeline-desc">科学研究費補助金 若手研究（代表）</span>
+          <span class="timeline-year">2014〜<br>2015年度</span>
+          <span class="timeline-desc">科学研究費補助事業 基盤研究（C）「不活動由来の痛みの末梢機構解明と理学療法学的介入方法の可能性を探る」（分担）</span>
         </div>
         <div class="timeline-item">
-          <span class="timeline-year">複数年度</span>
-          <span class="timeline-desc">科学研究費補助金 基盤研究（B・C）（分担）</span>
+          <span class="timeline-year">2015〜<br>2017年度</span>
+          <span class="timeline-desc">科学研究費補助事業 基盤研究（B）「拘縮の標的分子解明と新たな理学療法の治療戦略の開発に関する実験研究」（分担）</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2016〜<br>2017年度</span>
+          <span class="timeline-desc">科学研究費補助事業 若手研究（B）「筋性拘縮の発生に関わる分子機構解明と理学療法学的予防対策の生物学的効果の検証」（代表）</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2019〜<br>2021年度</span>
+          <span class="timeline-desc">科学研究費補助事業 若手研究「筋性拘縮の発生機序に関わる分子メカニズムの探索と理学療法学的戦略の開発」（代表）</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2019〜<br>2021年度</span>
+          <span class="timeline-desc">科学研究費補助事業 基盤研究（C）「変形性膝関節症における慢性疼痛の予防戦略としての運動療法の確立に向けた実験的研究」（分担）</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2020〜<br>2022年度</span>
+          <span class="timeline-desc">科学研究費補助事業 挑戦的研究（萌芽）「障害高齢者に対する終末期リハビリテーションの真価－拘縮の新たな介入戦略の開発ー」（分担）</span>
         </div>
       </div>
+      <a href="https://nrid.nii.ac.jp/ja/nrid/1000040736344/" target="_blank" rel="noopener" style="display:inline-block;margin-top:1rem;">
+        <img src="../images/members/科研費.jpg" alt="KAKEN 研究者情報（本田 祐一郎）" style="max-width:150px;width:100%;height:auto;display:block;">
+      </a>
     </section>
 
     <section class="profile-section">
       <h2 class="profile-section-title">受賞歴</h2>
       <div class="award-list">
         <div class="award-item">
-          <span class="award-year">受賞年度</span>
-          <span class="award-desc">第47回日本結合組織学会 Young Investigator Award</span>
+          <span class="award-year">2015年度</span>
+          <span class="award-desc">第47回日本結合組織学会学術大会 Young Investigator Award「Relationship between changes in extensibility and fibrotic molecules in immobilized skeletal muscle」</span>
         </div>
         <div class="award-item">
-          <span class="award-year">受賞年度</span>
-          <span class="award-desc">日本骨格筋電気刺激研究会 優秀演題賞（2件）</span>
+          <span class="award-year">2018年度</span>
+          <span class="award-desc">第5回日本骨格筋電気刺激研究会学術集会 優秀演題賞「B-SESによるラットヒラメ筋の筋性拘縮の進行抑制効果に関する検討」</span>
+        </div>
+        <div class="award-item">
+          <span class="award-year">2019年度</span>
+          <span class="award-desc">第6回日本骨格筋電気刺激研究会学術集会 優秀演題賞「不動化したラットヒラメ筋における線維化と筋線維萎縮に対するB-SESの効果ー日内介入頻度の影響ー」</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="profile-section">
+      <h2 class="profile-section-title">主な発表論文</h2>
+      <div class="award-list">
+        <div class="award-item">
+          <span class="award-year">2018年</span>
+          <span class="award-desc">Honda Y, Tanaka M, Tanaka N, Sasabe R, Goto K, Kataoka H, Sakamoto J, Nakano J, Okita M: Relationship between extensibility and collagen expression in immobilized rat skeletal muscle. Muscle Nerve 57(4): 672-678, 2018.</span>
+        </div>
+        <div class="award-item">
+          <span class="award-year">2018年</span>
+          <span class="award-desc">Honda Y, Sakamoto J, Hamaue Y, Kondo Y, Sasabe R, Goto K, Fukushima T, Oga S, Sasaki R, Tanaka N, Nakano J, Okita M: Effects of physical-agent pain relief modalities for fibromyalgia patients: A systematic review and meta-analysis of randomized controlled trials. Pain Res Manag 2018: 2930632, 2018.</span>
+        </div>
+        <div class="award-item">
+          <span class="award-year">2018年</span>
+          <span class="award-desc">本田祐一郎，坂本淳哉，中野治郎，沖田 実：関節可動域制限に対する基礎研究の動向と臨床への応用ー筋性拘縮の発生機序の解明ならびにエビデンスに基づいた治療戦略の開発を目的とした基礎研究ー 理学療法学 Vol.45(4): 275-280, 2018.</span>
+        </div>
+        <div class="award-item">
+          <span class="award-year">2015年</span>
+          <span class="award-desc">Honda Y, Sakamoto J, Nakano J, Kataoka H, Sasabe R, Goto K, Tanaka M, Origuchi T, Yoshimura T, Okita M: Upregulation of interleukin-1β/ transforming growth factor-β1 and hypoxia relate to molecular mechanisms underlying immobilization-induced muscle contracture. Muscle Nerve 52(3): 419-427, 2015.</span>
         </div>
       </div>
     </section>
 
   </div>
+
+  <section class="contact-section" id="contact">
+    <div class="container contact-inner">
+      <div class="contact-text">
+        <h2 class="contact-title">Contact</h2>
+        <p class="contact-desc">
+          研究室への進学・共同研究・<br>取材のご相談はお気軽にご連絡ください。
+        </p>
+        <a href="mailto:locomotive.reha@gmail.com" class="btn-contact">お問い合わせ →</a>
+      </div>
+      <div class="contact-info">
+        <dl class="info-list">
+          <div class="info-row">
+            <dt>住所</dt>
+            <dd>〒852-8520 長崎県長崎市坂本1-7-1<br>長崎大学大学院医歯薬学総合研究科<br>運動障害リハビリテーション学研究室</dd>
+          </div>
+          <div class="info-row">
+            <dt>TEL</dt>
+            <dd>095-819-7967</dd>
+          </div>
+          <div class="info-row">
+            <dt>Email</dt>
+            <dd><a href="mailto:locomotive.reha@gmail.com">locomotive.reha@gmail.com</a></dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
 
   <footer class="footer">
     <div class="container footer-inner">
@@ -141,12 +248,13 @@
         Nagasaki University Graduate School of Biomedical Sciences
       </p>
       <div class="footer-sns">
-        <a href="https://x.com/nu_locomo_lab" target="_blank" rel="noopener" aria-label="X（旧Twitter）">X</a>
-        <a href="https://www.facebook.com/people/%E9%95%B7%E5%B4%8E%E5%A4%A7%E5%AD%A6%E9%81%8B%E5%8B%95%E9%9A%9C%E5%AE%B3%E3%83%AA%E3%83%8F%E3%83%93%E3%83%AA%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E5%AD%A6%E7%A0%94%E7%A9%B6%E5%AE%A4/100065706000926/" target="_blank" rel="noopener" aria-label="Facebook">Facebook</a>
+        <a href="https://x.com/nu_locomo_lab" target="_blank" rel="noopener" aria-label="X（旧Twitter）"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>X</a>
+        <a href="https://www.facebook.com/people/%E9%95%B7%E5%B4%8E%E5%A4%A7%E5%AD%A6%E9%81%8B%E5%8B%95%E9%9A%9C%E5%AE%B3%E3%83%AA%E3%83%8F%E3%83%93%E3%83%AA%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E5%AD%A6%E7%A0%94%E7%A9%B6%E5%AE%A4/100065706000926/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>Facebook</a>
       </div>
     </div>
   </footer>
 
   <script src="../main.js"></script>
+  <script src="hero-slideshow.js"></script>
 </body>
 </html>

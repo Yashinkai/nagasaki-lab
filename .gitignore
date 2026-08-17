@@ -1,0 +1,22 @@
+# 編集時に自動生成される作業用バックアップ（公開サイトには不要）
+*.bak
+*.bak[0-9]
+*.bak[0-9][0-9]
+*.contactbak
+*.urlbak
+*.btnbak
+*.sizebak
+*.tocbak
+*.gallerybak
+*.hiresbak
+*.mixedsizebak
+*.sidenavbak
+*.snsbak
+*.w420bak
+*.2026bak
+*_original.jpg
+*_original.png
+*.figcapbak
+*.imgbak
+*.capbak
+*.lowres
