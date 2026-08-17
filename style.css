@@ -1481,6 +1481,17 @@ a.member-card {
   line-height: 1.7;
 }
 
+/* 配属が未確定の学年用。名簿が入り次第 .seminar-grid に差し替える */
+.seminar-pending {
+  background: var(--color-gray-light);
+  border-radius: 6px;
+  padding: 2.5rem 1.5rem;
+  font-size: 13px;
+  color: #666;
+  line-height: 1.9;
+  text-align: center;
+}
+
 /* ================================
    PUBLICATIONS / 研究業績ページ
    ================================ */
